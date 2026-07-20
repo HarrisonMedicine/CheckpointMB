@@ -1,0 +1,1738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkpoint MB — Manitoba Screening Guide</title>
+<meta name="description" content="Answer a few questions to see which cancer screenings and check-ups CancerCare Manitoba and Diabetes Canada recommend bringing up at your next visit.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Checkpoint MB — Manitoba Screening Guide">
+<meta property="og:description" content="Answer a few questions to see which cancer screenings and check-ups CancerCare Manitoba and Diabetes Canada recommend bringing up at your next visit.">
+<meta property="og:url" content="https://checkpointmb.ca/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Checkpoint MB — Manitoba Screening Guide">
+<meta name="twitter:description" content="Answer a few questions to see which cancer screenings and check-ups CancerCare Manitoba and Diabetes Canada recommend bringing up at your next visit.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 40'%3E%3Cline x1='4' y1='34' x2='44' y2='34' stroke='%23DAD4C6' stroke-width='3' stroke-linecap='round'/%3E%3Cline x1='24' y1='34' x2='24' y2='19' stroke='%231F5C56' stroke-width='3' stroke-linecap='round'/%3E%3Ccircle cx='24' cy='14' r='11' fill='%23D9A441' stroke='%23163F3B' stroke-width='2.5'/%3E%3Cpath d='M18.7 14.6 L22.3 18.2 L29.5 10.5' stroke='%23163F3B' stroke-width='2.6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #F6F4EE;
+    --bg-raised: #FFFFFF;
+    --ink: #1E2A28;
+    --ink-soft: #4A5652;
+    --teal: #1F5C56;
+    --teal-deep: #163F3B;
+    --gold: #D9A441;
+    --gold-soft: #F1DFB6;
+    --clay: #B5545C;
+    --clay-soft: #F3DCDE;
+    --sage: #5C8A66;
+    --sage-soft: #DEEBDF;
+    --line: #DAD4C6;
+    --line-soft: #E9E5D9;
+    --muted: #8b9490;
+    --radius: 14px;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Public Sans', sans-serif;
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:880px;margin:0 auto;padding:28px 20px 80px;}
+  h1,h2,h3{font-family:'Fraunces', serif;font-weight:600;margin:0;}
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--teal);font-weight:500;
+  }
+  /* header */
+  .topline{height:3px;background:linear-gradient(90deg,var(--gold),var(--teal));border-radius:2px;margin-bottom:22px;}
+  header.masthead{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:6px;flex-wrap:wrap;}
+  .logo-row{display:flex;align-items:center;gap:10px;margin-bottom:10px;}
+  .logo-mark{width:32px;height:27px;flex:none;}
+  .logo-word{font-family:'Fraunces',serif;font-weight:600;font-size:17px;letter-spacing:-0.01em;color:var(--teal-deep);}
+  .logo-word-accent{color:var(--gold);}
+  .brand h1{font-size:28px;color:var(--teal-deep);letter-spacing:-0.01em;}
+  .brand p{margin:4px 0 0;color:var(--ink-soft);font-size:15px;max-width:46ch;}
+  .headerbtn{
+    font-family:'Public Sans';font-size:13px;font-weight:600;color:var(--teal-deep);
+    background:var(--bg-raised);border:1px solid var(--line);border-radius:999px;
+    padding:8px 16px;cursor:pointer;white-space:nowrap;
+    transition:border-color .15s ease;
+  }
+  .headerbtn:hover{border-color:var(--teal);}
+
+  /* card shell */
+  .card{
+    background:var(--bg-raised);
+    border:1px solid var(--line-soft);
+    border-radius:var(--radius);
+    padding:28px;
+    margin-top:22px;
+    box-shadow:0 1px 3px rgba(30,42,40,.04), 0 10px 28px rgba(30,42,40,.05);
+  }
+  .disclaimer{
+    font-size:13px;color:var(--ink-soft);background:var(--sage-soft);
+    border:1px solid #cfe0d1;border-radius:10px;padding:12px 16px;margin-top:18px;
+  }
+  .disclaimer strong{color:var(--teal-deep);}
+  .disclaimer-check{
+    display:flex;align-items:flex-start;gap:10px;margin-top:14px;
+    font-size:14px;color:var(--ink-soft);cursor:pointer;
+  }
+  .disclaimer-check input{width:auto;flex:none;margin-top:3px;accent-color:var(--teal);}
+
+  /* screens */
+  .screen{display:none;}
+  .screen.active{display:block;}
+
+  /* intro */
+  .intro-grid{display:grid;grid-template-columns:1fr;gap:14px;margin-top:18px;}
+  .intro-point{display:flex;gap:12px;align-items:flex-start;}
+  .intro-point .dot{
+    width:8px;height:8px;border-radius:50%;background:var(--gold);margin-top:8px;flex:none;
+  }
+  .intro-point p{margin:0;font-size:15px;color:var(--ink-soft);}
+  .cta-row{display:flex;flex-direction:column;align-items:stretch;gap:12px;margin-top:24px;}
+  .cta-row .btn{text-align:center;}
+  .btn{
+    font-family:'Public Sans';font-weight:700;font-size:15px;
+    padding:13px 22px;border-radius:999px;border:none;cursor:pointer;
+    transition:transform .08s ease, background-color .15s ease, border-color .15s ease;
+  }
+  .btn:active{transform:scale(.98);}
+  .btn:disabled{opacity:.45;cursor:not-allowed;}
+  .btn-primary{background:var(--teal);color:#fff;}
+  .btn-primary:hover{background:var(--teal-deep);}
+  .btn-ghost{background:transparent;color:var(--teal-deep);border:1px solid var(--line);}
+  .btn-ghost:hover{border-color:var(--teal);}
+
+  /* progress trail (questionnaire) */
+  .qtrail{display:flex;gap:6px;margin-bottom:22px;}
+  .qtrail .seg{height:4px;flex:1;background:var(--line-soft);border-radius:2px;overflow:hidden;}
+  .qtrail .seg.done{background:var(--gold);}
+  .qtrail .seg.current{background:var(--teal);}
+
+  .qstep{}
+  .qstep .step-label{font-size:13px;color:var(--ink-soft);font-family:'IBM Plex Mono';margin-bottom:6px;}
+  .qstep h2{font-size:22px;margin-bottom:6px;color:var(--teal-deep);}
+  .qstep .help{color:var(--ink-soft);font-size:14px;margin:0 0 18px;}
+
+  .option-grid{display:flex;flex-wrap:wrap;gap:10px;}
+  .opt{
+    border:1.5px solid var(--line);border-radius:12px;padding:12px 18px;
+    cursor:pointer;font-size:15px;font-weight:600;color:var(--ink);
+    background:var(--bg-raised);user-select:none;
+    transition:border-color .15s ease, background-color .15s ease, color .15s ease;
+  }
+  .opt:hover{border-color:var(--teal);background:var(--line-soft);}
+  .opt.selected{background:var(--teal);border-color:var(--teal);color:#fff;}
+  .opt.selected:hover{background:var(--teal-deep);border-color:var(--teal-deep);}
+  .opt-small{padding:8px 14px;font-size:13px;border-radius:10px;font-weight:600;}
+
+  input[type=date], input[type=number], input[type=text], select{
+    font-family:'Public Sans';font-size:16px;padding:12px 14px;
+    border:1.5px solid var(--line);border-radius:10px;background:var(--bg-raised);color:var(--ink);
+    width:100%;max-width:280px;
+  }
+  input:focus, .opt:focus-visible, button:focus-visible, .tick-hit:focus-visible{
+    outline:3px solid var(--gold-soft);outline-offset:2px;border-color:var(--teal);
+  }
+  label.field-label{display:block;font-size:13px;font-weight:600;color:var(--ink-soft);margin:14px 0 6px;}
+
+  details.howto{margin-top:10px;font-size:13px;}
+  details.howto summary{cursor:pointer;color:var(--teal);font-weight:600;list-style:none;display:inline-flex;align-items:center;gap:4px;}
+  details.howto summary::-webkit-details-marker{display:none;}
+  details.howto summary::before{content:'?';display:inline-flex;align-items:center;justify-content:center;width:16px;height:16px;border-radius:50%;border:1.5px solid var(--teal);font-size:11px;flex:none;}
+  details.howto[open] summary{margin-bottom:8px;}
+  details.howto p{margin:0;color:var(--ink-soft);background:var(--bg);border:1px solid var(--line-soft);border-radius:10px;padding:12px 14px;}
+
+  .datefields{display:grid;grid-template-columns:1fr;gap:16px;margin-top:6px;}
+  @media(min-width:560px){.datefields{grid-template-columns:1fr 1fr;}}
+  .df label.field-label{margin-top:0;}
+
+  .nav-row{display:flex;justify-content:space-between;margin-top:26px;align-items:center;}
+  .skip-link{background:none;border:none;color:var(--ink-soft);text-decoration:underline;font-size:13px;cursor:pointer;padding:8px;}
+
+  .missing-warning{
+    background:var(--clay-soft);border:1px solid #e3b9bc;color:var(--clay);
+    border-radius:10px;padding:12px 16px;margin-top:18px;font-size:13.5px;line-height:1.5;
+  }
+  .missing-warning strong{color:var(--teal-deep);}
+
+  /* results header trail */
+  .trail-wrap{margin:6px 0 26px;overflow-x:auto;-webkit-overflow-scrolling:touch;}
+  .trail-svg{display:block;}
+  .trail-caption{font-size:12px;color:var(--ink-soft);font-family:'IBM Plex Mono';margin-top:6px;}
+  .trail-svg .tick-hit{cursor:pointer;}
+  .trail-tooltip{
+    position:fixed;max-width:240px;background:var(--teal-deep);color:#fff;
+    font-family:'Public Sans';font-size:12.5px;line-height:1.4;padding:10px 12px;
+    border-radius:10px;box-shadow:0 8px 20px rgba(0,0,0,.18);
+    opacity:0;pointer-events:none;transform:translate(-50%,-6px);
+    transition:opacity .12s ease, transform .12s ease;z-index:60;
+  }
+  .trail-tooltip.show{opacity:1;transform:translate(-50%,0);}
+  .trail-tooltip b{font-family:'IBM Plex Mono';font-weight:500;color:var(--gold-soft);display:block;margin-bottom:3px;font-size:11px;text-transform:uppercase;letter-spacing:.04em;}
+
+  .results-grid{display:grid;grid-template-columns:1fr;gap:16px;margin-top:8px;}
+  @media(min-width:640px){.results-grid{grid-template-columns:1fr 1fr;}}
+
+  .rcard{
+    border:1px solid var(--line-soft);border-radius:var(--radius);padding:20px;background:var(--bg-raised);
+    display:flex;flex-direction:column;gap:10px;
+  }
+  .rcard .rtop{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;}
+  .rcard h3{font-size:17px;color:var(--teal-deep);}
+  .pill{
+    font-family:'IBM Plex Mono';font-size:11px;font-weight:500;letter-spacing:.03em;
+    padding:4px 10px;border-radius:999px;white-space:nowrap;text-transform:uppercase;
+  }
+  .pill::before{margin-right:5px;font-weight:700;}
+  .pill.due{background:var(--clay-soft);color:var(--clay);}
+  .pill.due::before{content:'!';}
+  .pill.upcoming{background:var(--gold-soft);color:#8a6414;}
+  .pill.upcoming::before{content:'~';}
+  .pill.ok{background:var(--sage-soft);color:var(--sage);}
+  .pill.ok::before{content:'✓';}
+  .pill.na{background:var(--line-soft);color:var(--ink-soft);}
+  .pill.na::before{content:'–';}
+  .pill.ask{background:#E4E1F4;color:#5B4F9E;}
+  .pill.ask::before{content:'?';}
+
+  .rcard p.desc{font-size:14px;color:var(--ink-soft);margin:0;}
+  .rcard .meta{font-size:12px;color:var(--ink-soft);font-family:'IBM Plex Mono';}
+  .minitrack{height:6px;border-radius:3px;background:var(--line-soft);position:relative;overflow:hidden;margin-top:2px;}
+  .minitrack .fill{position:absolute;top:0;left:0;height:100%;background:var(--teal);border-radius:3px;}
+  .rcard .actions{display:flex;gap:8px;margin-top:6px;flex-wrap:wrap;}
+  .miniBtn{
+    font-family:'Public Sans';font-size:12.5px;font-weight:600;color:var(--teal-deep);
+    background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:7px 12px;cursor:pointer;
+    transition:border-color .15s ease;
+  }
+  .miniBtn:hover{border-color:var(--teal);}
+  .rcard .source{font-size:11px;color:var(--muted);margin-top:2px;}
+
+  .scorebox{display:flex;align-items:baseline;gap:10px;}
+  .scorebox .num{font-family:'Fraunces',serif;font-size:40px;font-weight:600;color:var(--teal-deep);line-height:1;}
+  .scorebox .cat{font-family:'IBM Plex Mono';font-size:12px;text-transform:uppercase;letter-spacing:.04em;padding:4px 10px;border-radius:999px;}
+  .scorebox .cat.low{background:var(--sage-soft);color:var(--sage);}
+  .scorebox .cat.moderate{background:var(--gold-soft);color:#8a6414;}
+  .scorebox .cat.high{background:var(--clay-soft);color:var(--clay);}
+
+  /* bonus panel */
+  .bonus{margin-top:26px;border-top:1px dashed var(--line);padding-top:18px;}
+  .bonus h3{font-size:15px;color:var(--teal-deep);margin-bottom:10px;}
+  .bonus ul{margin:0;padding-left:18px;font-size:14px;color:var(--ink-soft);}
+  .bonus li{margin-bottom:6px;}
+
+  /* saved / reminders panel */
+  .saverow{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:20px;}
+  .savename{font-size:15px;}
+  .reminders{margin-top:10px;}
+  .reminder-item{
+    display:flex;justify-content:space-between;align-items:center;
+    padding:10px 0;border-bottom:1px solid var(--line-soft);font-size:14px;
+  }
+  .reminder-item:last-child{border-bottom:none;}
+  .reminder-item .rdate{font-family:'IBM Plex Mono';font-size:13px;color:var(--ink-soft);}
+
+  .toast{
+    position:fixed;bottom:24px;left:50%;transform:translateX(-50%);
+    background:var(--teal-deep);color:#fff;padding:10px 20px;border-radius:999px;
+    font-size:14px;box-shadow:0 6px 20px rgba(0,0,0,.15);opacity:0;pointer-events:none;
+    transition:opacity .2s ease, transform .2s ease;z-index:50;
+  }
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(-4px);}
+
+  footer{margin-top:34px;font-size:12px;color:var(--muted);text-align:center;}
+  footer a{color:var(--teal);}
+
+  .print-only{display:none;}
+
+  @media print{
+    body{background:#fff;font-size:12px;}
+    .no-print{display:none !important;}
+    .print-only{display:inline;}
+    .topline{display:none;}
+    .wrap{max-width:100%;padding:0;}
+    header.masthead{margin-bottom:2px;}
+    .brand p{display:none;}
+    .brand h1{font-size:16px;}
+    .logo-row{margin-bottom:4px;}
+    .logo-mark{width:20px;height:17px;}
+    .logo-word{font-size:12px;}
+    #trailWrap, .trail-tooltip, #familyDoctorCard, #bonusPanel, #reminderPanel, footer{display:none !important;}
+    #screen-results h2{font-size:16px !important;margin-top:2px !important;}
+    #printDate{display:block !important;margin:2px 0 4px !important;}
+    .eyebrow{font-size:10px;}
+    .card{border:1px solid #ccc;box-shadow:none;break-inside:avoid;padding:10px;margin-top:6px;}
+    .results-grid{grid-template-columns:1fr 1fr;gap:8px;margin-top:6px;}
+    .rcard{padding:9px 11px;gap:5px;break-inside:avoid;}
+    .rcard h3{font-size:12.5px;}
+    .rcard p.desc{font-size:10.5px;line-height:1.4;}
+    .rcard .meta, .rcard .source{font-size:9px;}
+    .rcard .actions{display:none;}
+    .minitrack{height:4px;margin-top:1px;}
+    .pill{font-size:9px;padding:3px 8px;background:#fff !important;color:#000 !important;border:1px solid #999;}
+    .scorebox .num{font-size:26px;}
+    .scorebox .cat{font-size:9.5px;background:#fff !important;color:#000 !important;border:1px solid #999;}
+    .disclaimer{font-size:9.5px;padding:7px 10px;margin-top:8px;}
+    a{color:#000;}
+  }
+  @page{ margin:10mm; }
+
+  @media (max-width:420px){
+    .wrap{padding:20px 14px 60px;}
+    .card{padding:20px;}
+    .brand h1{font-size:24px;}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .btn, .toast, .opt, .headerbtn, .miniBtn{transition:none;}
+  }
+</style>
+</head>
+<body>
+<!-- ============ DEV ONLY: delete this whole block before shipping ============ -->
+<button id="devFillBtn" class="no-print" style="position:fixed;bottom:14px;left:14px;z-index:100;background:#1a1a1a;color:#fff;border:1px dashed #999;border-radius:8px;padding:8px 14px;font-family:'IBM Plex Mono',monospace;font-size:12px;cursor:pointer;">🧪 Fill test patient (dev)</button>
+<!-- ============ END DEV ONLY ============ -->
+
+<div class="wrap">
+  <div class="topline"></div>
+  <header class="masthead">
+    <div class="brand">
+      <div class="logo-row">
+        <svg class="logo-mark" viewBox="0 0 48 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+          <line x1="4" y1="34" x2="44" y2="34" stroke="#DAD4C6" stroke-width="3" stroke-linecap="round"/>
+          <line x1="24" y1="34" x2="24" y2="19" stroke="#1F5C56" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="24" cy="14" r="11" fill="#D9A441" stroke="#163F3B" stroke-width="2.5"/>
+          <path d="M18.7 14.6 L22.3 18.2 L29.5 10.5" stroke="#163F3B" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="logo-word">Checkpoint<span class="logo-word-accent"> MB</span></span>
+      </div>
+      <h1>A screening guide for Manitoba adults</h1>
+      <p>Answer a few questions to see which cancer screenings and check-ups CancerCare Manitoba and Diabetes Canada recommend bringing up at your next visit.</p>
+    </div>
+    <button class="headerbtn no-print" id="savedBtn" style="display:none;">View saved profile</button>
+  </header>
+
+  <!-- INTRO -->
+  <section class="screen active" id="screen-intro">
+    <div class="card">
+      <h2 style="font-size:20px;color:var(--teal-deep);">Before you start</h2>
+      <div class="intro-grid">
+        <div class="intro-point"><div class="dot"></div><p>This is educational information, not a diagnosis. It's built from CancerCare Manitoba's BreastCheck, CervixCheck and ColonCheck guidelines and Diabetes Canada's screening guideline, for adults at <strong>average risk with no symptoms</strong>.</p></div>
+        <div class="intro-point"><div class="dot"></div><p>It doesn't replace an invitation letter from a screening program, and it can't account for every personal or family history detail — bring your answers to your doctor.</p></div>
+        <div class="intro-point"><div class="dot"></div><p>Your answers are saved only in this browser tool, so you can pick up where you left off or add reminders to your own calendar.</p></div>
+      </div>
+      <div class="disclaimer"><strong>Not medical advice.</strong> Screening needs vary by personal and family history. Always confirm timing and eligibility with a healthcare provider.</div>
+      <label class="disclaimer-check">
+        <input type="checkbox" id="disclaimerCheck">
+        <span>I understand this is general information, not medical advice, and doesn't replace guidance from a healthcare provider.</span>
+      </label>
+      <div class="cta-row">
+        <button class="btn btn-primary" id="startBtn" onclick="goToQuestionnaire()" disabled>Start (about 2 minutes)</button>
+        <button class="btn btn-ghost" id="continueBtn" style="display:none;" onclick="loadSavedAndShowResults()" disabled>Continue with saved answers</button>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:16px;">
+      <h3 style="font-size:15px;color:var(--teal-deep);">Official tools this is built on</h3>
+      <p style="font-size:14px;color:var(--ink-soft);margin:8px 0 12px;">This guide is a companion to these, not a replacement — worth bookmarking alongside it:</p>
+      <ul style="margin:0;padding-left:18px;font-size:14px;color:var(--ink-soft);">
+        <li style="margin-bottom:6px;"><a href="https://www.cancercare.mb.ca/screening/decision-aid" target="_blank" rel="noopener">CancerCare Manitoba's Cancer Prevention &amp; Screening Decision Aid</a> — the official BreastCheck / CervixCheck / ColonCheck eligibility tool</li>
+        <li style="margin-bottom:6px;"><a href="https://www.diabetes.ca/resources/tools---resources/my-risk-for-developing-diabetes" target="_blank" rel="noopener">CANRISK</a> — Diabetes Canada's validated diabetes risk questionnaire. This tool calculates the same score for you inline, using the official 2011 point system.</li>
+        <li><a href="https://canadiantaskforce.ca/tools-resources/" target="_blank" rel="noopener">Canadian Task Force on Preventive Health Care tools</a> — patient decision aids for lung cancer screening, osteoporosis, depression and more</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- QUESTIONNAIRE -->
+  <section class="screen" id="screen-quiz">
+    <div class="card">
+      <div class="qtrail" id="qtrail"></div>
+      <div class="qstep" id="qstep-body"></div>
+      <div class="missing-warning" id="missingWarning" style="display:none;" role="alert"></div>
+      <div class="nav-row">
+        <button class="skip-link" id="backBtn" onclick="prevStep()">← Back</button>
+        <button class="btn btn-primary" id="nextBtn" onclick="nextStep()">Next</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESULTS -->
+  <section class="screen" id="screen-results">
+    <div class="card">
+      <span class="eyebrow">Your results</span>
+      <h2 style="font-size:22px;color:var(--teal-deep);margin-top:4px;">What to raise at your next visit</h2>
+      <div class="print-only" id="printDate" style="font-family:'IBM Plex Mono';font-size:11px;color:#555;margin-top:4px;"></div>
+      <div class="trail-wrap" id="trailWrap"></div>
+      <div class="trail-tooltip" id="trailTooltip"></div>
+
+      <div class="card" id="familyDoctorCard" style="margin-top:0;margin-bottom:16px;box-shadow:none;">
+        <h3 style="font-size:15px;color:var(--teal-deep);">Do you have a family doctor or nurse practitioner?</h3>
+        <p style="font-size:14px;color:var(--ink-soft);margin:8px 0 14px;">If not, Manitoba's Family Doctor Finder can connect you with one for free — a home clinic makes it much easier to actually act on what's below.</p>
+        <a class="btn btn-primary no-print" href="https://www.gov.mb.ca/health/familydoctorfinder/" target="_blank" rel="noopener" style="text-decoration:none;display:inline-block;">Find a family doctor →</a>
+        <span class="print-only" style="font-size:13px;">gov.mb.ca/health/familydoctorfinder — or call 1-866-690-8260</span>
+      </div>
+
+      <div class="results-grid" id="resultsGrid"></div>
+
+      <div class="bonus" id="bonusPanel"></div>
+
+      <div class="disclaimer"><strong>Remember:</strong> these are general guideline dates, not a clinical assessment. Family history, prior abnormal results, and symptoms can all change what's right for you — your doctor has the full picture.</div>
+
+      <div class="saverow no-print">
+        <input type="text" id="nameInput" class="savename" placeholder="Name this profile (optional)" style="max-width:220px;">
+        <button class="btn btn-primary" onclick="saveProfile()">Save profile</button>
+        <button class="btn btn-ghost" onclick="window.print()">Print my results</button>
+        <button class="btn btn-ghost" onclick="restart()">Start over</button>
+      </div>
+
+      <div id="reminderPanel" style="display:none;">
+        <h3 style="font-size:15px;color:var(--teal-deep);margin-top:24px;">Upcoming reminders</h3>
+        <div class="reminders" id="reminderList"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    Sources: CancerCare Manitoba screening guidelines (Dec 2025) · Diabetes Canada clinical practice guidelines · Canadian Task Force on Preventive Health Care.<br>
+    Official tools: <a href="https://www.cancercare.mb.ca/screening/decision-aid" target="_blank" rel="noopener">CancerCare MB Decision Aid</a> · <a href="https://www.diabetes.ca/resources/tools---resources/my-risk-for-developing-diabetes" target="_blank" rel="noopener">CANRISK</a> · <a href="https://canadiantaskforce.ca/tools-resources/" target="_blank" rel="noopener">CTFPHC tools</a><br>
+    Built as an independent reference tool — not affiliated with CancerCare Manitoba or Manitoba Health.
+  </footer>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* ---------------- state ---------------- */
+const STORAGE_KEY = 'profile:main';
+
+let answers = {
+  dob: null,
+  hasCervix: null,
+  everSexuallyActive: null,
+  hasBreastTissue: null,
+  familyHistory: [],
+  familyHistoryAges: {},
+  smoking: null,
+  packsPerDay: null,
+  yearsSmoked: null,
+  yearsSinceQuit: null,
+  lastPap: null,
+  lastPapStatus: null,
+  lastMammogram: null,
+  lastMammogramStatus: null,
+  lastFIT: null,
+  lastFITStatus: null,
+  lastDiabetesTest: null,
+  lastDiabetesTestStatus: null,
+  /* CANRISK fields */
+  unitSystem: 'metric',
+  canriskSex: null,
+  heightCm: null,
+  weightKg: null,
+  waistCm: null,
+  physicallyActive: null,
+  dailyFruitVeg: null,
+  highBP: null,
+  highBloodSugarHx: null,
+  largeBaby: null,
+  diabetesFamily: [],
+  ethnicityMother: null,
+  ethnicityFather: null,
+  education: null,
+};
+
+let profileName = '';
+
+/* ---------------- question flow config ---------------- */
+const steps = [
+  {
+    id: 'dob', category: 'Basics', title: 'When were you born?',
+    help: 'Age is the biggest factor in when screening starts and stops.',
+    render: renderDobStep,
+    missing: () => answers.dob ? [] : ['your birth date']
+  },
+  {
+    id: 'cervix', category: 'Cervix Check', title: 'Do you have a cervix?',
+    help: 'This includes anyone with a cervix, regardless of gender identity.',
+    render: renderCervixStep,
+    missing: () => {
+      const m = [];
+      if(answers.hasCervix === null) m.push('whether you have a cervix');
+      else if(answers.hasCervix === true && answers.everSexuallyActive === null) m.push('whether you\'ve ever been sexually active');
+      return m;
+    }
+  },
+  {
+    id: 'breast', category: 'Breast Check', title: 'Do you have breast tissue that could be screened?',
+    help: 'For example, if you were assigned female at birth, or take feminizing hormone therapy.',
+    render: renderBreastStep,
+    missing: () => answers.hasBreastTissue === null ? ['whether you have breast tissue'] : []
+  },
+  {
+    id: 'colon', category: 'Colon Check', title: 'When was your last FIT test or colonoscopy?',
+    help: 'Leave this blank if you\'re not sure, or have never had one — everyone gets a ColonCheck recommendation based on age either way.',
+    render: renderColonStep, missing: () => []
+  },
+  {
+    id: 'familyHistory', category: 'Family History', title: 'Has a close blood relative — parent, sibling, or child — been diagnosed with any of these?',
+    help: 'Select all that apply. This can shift when screening should start.',
+    render: renderFamilyHistoryStep,
+    missing: () => answers.familyHistory.length > 0 ? [] : ['your family history answer']
+  },
+  {
+    id: 'canriskBody', category: 'Diabetes', title: 'A few body measurements',
+    help: 'These feed directly into your CANRISK diabetes risk score below.',
+    render: renderCanriskBodyStep,
+    missing: () => {
+      const m = [];
+      if(!answers.canriskSex) m.push('sex assigned at birth');
+      if(!answers.heightCm) m.push('height');
+      if(!answers.weightKg) m.push('weight');
+      if(!answers.waistCm) m.push('waist measurement');
+      return m;
+    }
+  },
+  {
+    id: 'canriskHealth', category: 'Diabetes', title: 'Your health history',
+    help: 'Each of these is one of the questions used in the official CANRISK questionnaire.',
+    render: renderCanriskHealthStep,
+    missing: () => {
+      const labels = { physicallyActive:'activity level', dailyFruitVeg:'diet habits', highBP:'blood pressure history', highBloodSugarHx:'blood sugar history', largeBaby:'pregnancy history' };
+      return Object.keys(labels).filter(k => answers[k] === null).map(k => labels[k]);
+    }
+  },
+  {
+    id: 'canriskBackground', category: 'Diabetes', title: 'Family & background',
+    help: 'Family history, ethnicity and education all factor into the CANRISK score.',
+    render: renderCanriskBackgroundStep,
+    missing: () => answers.diabetesFamily.length > 0 ? [] : ['family history of diabetes']
+  },
+  {
+    id: 'diabetesLastTest', category: 'Diabetes', title: 'When was your last diabetes blood test?',
+    help: 'An A1C or fasting glucose test, if you\'ve had one. Leave blank if you\'re not sure, or never have.',
+    render: renderDiabetesLastTestStep, missing: () => []
+  },
+  {
+    id: 'smoking', category: 'Smoking History', title: 'What best describes your smoking history?',
+    help: 'This only affects the lung screening note at the end.',
+    render: renderSmokingStep,
+    missing: () => answers.smoking ? [] : ['your smoking history']
+  },
+];
+steps.forEach(s => { s.validate = () => s.missing().length === 0; });
+
+function visibleSteps(){
+  return steps.filter(s => !s.showIf || s.showIf());
+}
+
+let stepIndex = 0;
+
+/* ---------------- navigation ---------------- */
+function goToQuestionnaire(){
+  stepIndex = 0;
+  showScreen('screen-quiz');
+  renderStep();
+}
+
+function showScreen(id){
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+
+let awaitingConfirm = false;
+
+function renderStep(){
+  const vs = visibleSteps();
+  const step = vs[stepIndex];
+  const total = vs.length;
+
+  // trail
+  const trail = document.getElementById('qtrail');
+  trail.innerHTML = '';
+  for(let i=0;i<total;i++){
+    const seg = document.createElement('div');
+    seg.className = 'seg' + (i < stepIndex ? ' done' : i === stepIndex ? ' current' : '');
+    trail.appendChild(seg);
+  }
+
+  const body = document.getElementById('qstep-body');
+  body.innerHTML = `<div class="step-label">${step.category}</div>
+    <h2>${step.title}</h2>
+    <p class="help">${step.help}</p>
+    <div id="qstep-content"></div>`;
+  step.render();
+
+  document.getElementById('backBtn').style.visibility = stepIndex === 0 ? 'hidden' : 'visible';
+  awaitingConfirm = false;
+  hideMissingWarning();
+  refreshNav();
+  enhanceOptA11y();
+}
+
+function enhanceOptA11y(){
+  document.querySelectorAll('#qstep-content .opt').forEach(el=>{
+    el.tabIndex = 0;
+    el.setAttribute('role','button');
+    el.addEventListener('keydown', e=>{
+      if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); el.click(); }
+    });
+  });
+}
+
+function nextStep(){
+  const vs = visibleSteps();
+  const step = vs[stepIndex];
+  const missing = step.missing();
+
+  if(missing.length && !awaitingConfirm){
+    awaitingConfirm = true;
+    showMissingWarning(missing);
+    return;
+  }
+
+  awaitingConfirm = false;
+  hideMissingWarning();
+
+  if(stepIndex < vs.length - 1){
+    stepIndex++;
+    renderStep();
+  } else {
+    computeAndShowResults();
+  }
+}
+
+function prevStep(){
+  if(stepIndex > 0){
+    stepIndex--;
+    renderStep();
+  }
+}
+
+function showMissingWarning(missing){
+  const w = document.getElementById('missingWarning');
+  const list = missing.length === 1 ? missing[0] : missing.slice(0,-1).join(', ') + ' and ' + missing[missing.length-1];
+  w.innerHTML = `<strong>Missing:</strong> ${list}. That's okay to leave blank — click "${document.getElementById('nextBtn').textContent}" again to continue anyway, or answer above first.`;
+  w.style.display = 'block';
+}
+
+function hideMissingWarning(){
+  document.getElementById('missingWarning').style.display = 'none';
+}
+
+function refreshNav(){
+  const vs = visibleSteps();
+  const step = vs[stepIndex];
+  const total = vs.length;
+  document.getElementById('nextBtn').textContent = stepIndex === total - 1 ? 'See my results' : 'Next';
+  if(!step.missing().length){
+    awaitingConfirm = false;
+    hideMissingWarning();
+  }
+}
+
+/* ---------------- step renderers ---------------- */
+function renderDobStep(){
+  const c = document.getElementById('qstep-content');
+  c.innerHTML = `<input type="date" id="dobInput" value="${answers.dob||''}" max="${todayStr()}">`;
+  document.getElementById('dobInput').addEventListener('change', e=>{
+    answers.dob = e.target.value;
+    refreshNav();
+  });
+}
+
+function renderCervixStep(){
+  const c = document.getElementById('qstep-content');
+  let html = `<div class="option-grid" id="cervix-grid">
+      <div class="opt ${answers.hasCervix===true?'selected':''}" data-v="true">Yes</div>
+      <div class="opt ${answers.hasCervix===false?'selected':''}" data-v="false">No</div>
+    </div>
+    <details class="howto"><summary>How do I know?</summary>
+      <p>You have a cervix if you were assigned female at birth and haven't had a total hysterectomy (a surgery that removes the cervix along with the uterus). A partial hysterectomy can sometimes leave the cervix in place. If you're not sure which surgery you had, your surgical report, your doctor, or your clinic can tell you.</p>
+    </details>`;
+
+  if(answers.hasCervix === true){
+    html += `<label class="field-label">Have you ever been sexually active?</label>
+      <div class="option-grid" id="active-grid">
+        <div class="opt ${answers.everSexuallyActive===true?'selected':''}" data-v="true">Yes</div>
+        <div class="opt ${answers.everSexuallyActive===false?'selected':''}" data-v="false">No</div>
+      </div>
+      <details class="howto"><summary>What counts?</summary>
+        <p>Any kind of sexual contact counts, not only intercourse. It matters because cervical cancer risk is linked to HPV, a virus that spreads through skin-to-skin sexual contact.</p>
+      </details>`;
+  }
+  if(answers.hasCervix === true && answers.everSexuallyActive !== null){
+    html += `<label class="field-label" for="lastPapInput">Last Pap or HPV test</label>
+      <input type="date" id="lastPapInput" value="${answers.lastPap||''}" max="${todayStr()}">
+      <div class="option-grid" id="lastPap-status-grid" style="margin-top:10px;">
+        <div class="opt opt-small ${answers.lastPapStatus==='unsure'?'selected':''}" data-v="unsure">Not sure when</div>
+        <div class="opt opt-small ${answers.lastPapStatus==='never'?'selected':''}" data-v="never">Never had one</div>
+      </div>
+      <details class="howto"><summary>What is this?</summary>
+        <p>A Pap test collects cells from your cervix to check for changes that could become cancer. An HPV test checks that same sample for the virus that causes those changes. Manitoba offers both — an in-clinic Pap test, or an at-home HPV self-screening kit.</p>
+      </details>`;
+  }
+  c.innerHTML = html;
+
+  c.querySelectorAll('#cervix-grid .opt').forEach(el=>{
+    el.onclick = ()=>{
+      answers.hasCervix = el.dataset.v === 'true';
+      if(answers.hasCervix !== true){ answers.everSexuallyActive = null; answers.lastPap = null; answers.lastPapStatus = null; }
+      renderStep();
+    };
+  });
+  const activeGrid = c.querySelector('#active-grid');
+  if(activeGrid){
+    activeGrid.querySelectorAll('.opt').forEach(el=>{
+      el.onclick = ()=>{
+        answers.everSexuallyActive = el.dataset.v === 'true';
+        renderStep();
+      };
+    });
+  }
+  const papInput = document.getElementById('lastPapInput');
+  if(papInput) papInput.addEventListener('change', e => {
+    answers.lastPap = e.target.value || null;
+    if(answers.lastPap) answers.lastPapStatus = null;
+    renderStep();
+  });
+  const papStatusGrid = c.querySelector('#lastPap-status-grid');
+  if(papStatusGrid){
+    papStatusGrid.querySelectorAll('.opt').forEach(el=>{
+      el.onclick = ()=>{
+        answers.lastPapStatus = el.dataset.v;
+        answers.lastPap = null;
+        renderStep();
+      };
+    });
+  }
+}
+
+function renderBreastStep(){
+  const c = document.getElementById('qstep-content');
+  let html = `<div class="option-grid" id="breast-grid">
+      <div class="opt ${answers.hasBreastTissue===true?'selected':''}" data-v="true">Yes</div>
+      <div class="opt ${answers.hasBreastTissue===false?'selected':''}" data-v="false">No</div>
+    </div>
+    <details class="howto"><summary>How do I know?</summary>
+      <p>Most people have breast tissue that can be screened — for example, if you were assigned female at birth, or if you take feminizing hormone therapy. A full double mastectomy (removal of all breast tissue) is the main reason someone wouldn't. If you've had a mastectomy for risk-reduction or reconstruction rather than removal of all tissue, ask your doctor whether screening still applies to you.</p>
+    </details>`;
+
+  if(answers.hasBreastTissue === true){
+    html += `<label class="field-label" for="lastMammoInput">Last screening mammogram</label>
+      <input type="date" id="lastMammoInput" value="${answers.lastMammogram||''}" max="${todayStr()}">
+      <div class="option-grid" id="lastMammo-status-grid" style="margin-top:10px;">
+        <div class="opt opt-small ${answers.lastMammogramStatus==='unsure'?'selected':''}" data-v="unsure">Not sure when</div>
+        <div class="opt opt-small ${answers.lastMammogramStatus==='never'?'selected':''}" data-v="never">Never had one</div>
+      </div>
+      <details class="howto"><summary>What is a mammogram?</summary>
+        <p>A mammogram is a low-dose X-ray of breast tissue that can find changes years before they'd be noticeable by touch. It's done at a BreastCheck clinic or diagnostic imaging centre and takes about 20 minutes.</p>
+      </details>`;
+  }
+  c.innerHTML = html;
+
+  c.querySelectorAll('#breast-grid .opt').forEach(el=>{
+    el.onclick = ()=>{
+      answers.hasBreastTissue = el.dataset.v === 'true';
+      if(answers.hasBreastTissue !== true){ answers.lastMammogram = null; answers.lastMammogramStatus = null; }
+      renderStep();
+    };
+  });
+  const mammoInput = document.getElementById('lastMammoInput');
+  if(mammoInput) mammoInput.addEventListener('change', e => {
+    answers.lastMammogram = e.target.value || null;
+    if(answers.lastMammogram) answers.lastMammogramStatus = null;
+    renderStep();
+  });
+  const mammoStatusGrid = c.querySelector('#lastMammo-status-grid');
+  if(mammoStatusGrid){
+    mammoStatusGrid.querySelectorAll('.opt').forEach(el=>{
+      el.onclick = ()=>{
+        answers.lastMammogramStatus = el.dataset.v;
+        answers.lastMammogram = null;
+        renderStep();
+      };
+    });
+  }
+}
+
+function renderColonStep(){
+  const c = document.getElementById('qstep-content');
+  c.innerHTML = `<input type="date" id="lastFITInput" value="${answers.lastFIT||''}" max="${todayStr()}">
+    <div class="option-grid" id="lastFIT-status-grid" style="margin-top:10px;">
+      <div class="opt opt-small ${answers.lastFITStatus==='unsure'?'selected':''}" data-v="unsure">Not sure when</div>
+      <div class="opt opt-small ${answers.lastFITStatus==='never'?'selected':''}" data-v="never">Never had one</div>
+    </div>
+    <details class="howto"><summary>What are these?</summary>
+      <p>A FIT (fecal immunochemical test) is an at-home kit that checks a small stool sample for hidden blood — no bowel prep needed. A colonoscopy is an in-clinic procedure where a doctor examines the entire colon with a camera, usually done if a FIT result comes back abnormal or if you're at higher risk.</p>
+    </details>`;
+  document.getElementById('lastFITInput').addEventListener('change', e => {
+    answers.lastFIT = e.target.value || null;
+    if(answers.lastFIT) answers.lastFITStatus = null;
+    renderStep();
+  });
+  c.querySelector('#lastFIT-status-grid').querySelectorAll('.opt').forEach(el=>{
+    el.onclick = ()=>{
+      answers.lastFITStatus = el.dataset.v;
+      answers.lastFIT = null;
+      renderStep();
+    };
+  });
+}
+
+function renderFamilyHistoryStep(){
+  const c = document.getElementById('qstep-content');
+  const options = ['Breast cancer','Ovarian cancer','Colorectal cancer','Cervical cancer','None of these'];
+  let html = `<div class="option-grid" id="fh-grid">` + options.map(o=>
+    `<div class="opt ${answers.familyHistory.includes(o)?'selected':''}" data-v="${o}">${o}</div>`
+  ).join('') + `</div>`;
+
+  const selected = answers.familyHistory.filter(f => f !== 'None of these');
+  if(selected.length){
+    const ageOptions = ['— Select —', ...Array.from({length:91}, (_,i)=> String(10+i))];
+    html += `<label class="field-label">Age at earliest diagnosis</label>
+      <p style="font-size:12px;color:var(--ink-soft);margin:-2px 0 10px;">If more than one relative had the same condition, use the youngest age at diagnosis.</p>
+      <div class="datefields">` + selected.map(cond => { const fid = 'fh-age-' + cond.toLowerCase().replace(/[^a-z0-9]+/g,'-'); return `
+        <div class="df"><label class="field-label" style="margin-top:0;" for="${fid}">${cond}</label>
+          <select class="fh-age" id="${fid}" data-cond="${cond}">${ageOptions.map(o=>`<option value="${o}" ${answers.familyHistoryAges[cond]===o?'selected':''}>${o}</option>`).join('')}</select>
+        </div>`; }).join('') + `</div>`;
+  }
+  c.innerHTML = html;
+
+  c.querySelectorAll('#fh-grid .opt').forEach(el=>{
+    el.onclick = ()=>{
+      const v = el.dataset.v;
+      toggleMulti(answers.familyHistory, v, 'None of these');
+      if(v === 'None of these'){
+        answers.familyHistoryAges = {};
+      } else if(!answers.familyHistory.includes(v)){
+        delete answers.familyHistoryAges[v];
+      }
+      renderStep();
+    };
+  });
+  c.querySelectorAll('.fh-age').forEach(sel=>{
+    sel.onchange = e=>{
+      const cond = e.target.dataset.cond;
+      const val = e.target.value;
+      if(val.startsWith('—')) delete answers.familyHistoryAges[cond];
+      else answers.familyHistoryAges[cond] = val;
+    };
+  });
+}
+
+function renderCanriskBodyStep(){
+  const c = document.getElementById('qstep-content');
+  const isImperial = answers.unitSystem === 'imperial';
+  c.innerHTML = `
+    <div style="margin-bottom:16px;">
+      <label class="field-label">Sex assigned at birth</label>
+      <div class="option-grid" id="sex-grid">
+        <div class="opt ${answers.canriskSex==='female'?'selected':''}" data-v="female">Female</div>
+        <div class="opt ${answers.canriskSex==='male'?'selected':''}" data-v="male">Male</div>
+      </div>
+      <p style="font-size:12px;color:var(--ink-soft);margin-top:6px;">CANRISK's validated scoring only distinguishes male/female — a limitation of the tool itself, not a statement about anyone's identity.</p>
+    </div>
+    <div class="datefields">
+      <div class="df"><label class="field-label" for="${isImperial?'hft':'hcm'}">Height ${isImperial?'(ft / in)':'(cm)'}</label>
+        ${isImperial
+          ? `<div style="display:flex;gap:8px;"><input type="number" min="0" id="hft" placeholder="ft" style="max-width:80px;"><input type="number" min="0" id="hin" placeholder="in" style="max-width:80px;"></div>`
+          : `<input type="number" min="0" id="hcm" placeholder="e.g. 170" value="${answers.heightCm ?? ''}">`}
+      </div>
+      <div class="df"><label class="field-label" for="wgt">Weight ${isImperial?'(lb)':'(kg)'}</label>
+        <input type="number" min="0" id="wgt" placeholder="${isImperial?'e.g. 154':'e.g. 70'}">
+      </div>
+      <div class="df" style="grid-column:1/-1;"><label class="field-label" for="waist">Waist circumference ${isImperial?'(in)':'(cm)'}</label>
+        <input type="number" min="0" step="0.1" id="waist" placeholder="${isImperial?'e.g. 34':'e.g. 86'}">
+        <p style="font-size:12px;color:var(--ink-soft);margin-top:4px;">Measured at the belly button, after breathing out — not your pant size.</p>
+      </div>
+    </div>
+    <button class="skip-link" id="unitToggle" style="margin-top:10px;padding-left:0;">Switch to ${isImperial?'cm & kg':'ft/in & lb'}</button>
+  `;
+  c.querySelectorAll('#sex-grid .opt').forEach(el=>{
+    el.onclick = ()=>{ answers.canriskSex = el.dataset.v; renderStep(); };
+  });
+  document.getElementById('unitToggle').onclick = ()=>{
+    answers.unitSystem = isImperial ? 'metric' : 'imperial';
+    renderStep();
+  };
+  if(isImperial){
+    const hft = document.getElementById('hft'), hin = document.getElementById('hin');
+    if(answers.heightCm){
+      const totalIn = answers.heightCm / 2.54;
+      hft.value = Math.floor(totalIn/12);
+      hin.value = Math.round(totalIn%12);
+    }
+    const syncHeight = ()=>{
+      const ft = parseFloat(hft.value)||0, inch = parseFloat(hin.value)||0;
+      answers.heightCm = (ft*12+inch) ? Math.round((ft*12+inch)*2.54*10)/10 : null;
+    };
+    hft.oninput = syncHeight; hin.oninput = syncHeight;
+    const wgt = document.getElementById('wgt');
+    if(answers.weightKg) wgt.value = Math.round(answers.weightKg*2.20462);
+    const waist = document.getElementById('waist');
+    if(answers.waistCm) waist.value = Math.round(answers.waistCm/2.54*10)/10;
+  } else {
+    document.getElementById('hcm').oninput = e => answers.heightCm = e.target.value ? parseFloat(e.target.value) : null;
+    const wgt = document.getElementById('wgt');
+    if(answers.weightKg) wgt.value = answers.weightKg;
+    const waist = document.getElementById('waist');
+    if(answers.waistCm) waist.value = answers.waistCm;
+  }
+  document.getElementById('wgt').oninput = e=>{
+    const v = e.target.value ? parseFloat(e.target.value) : null;
+    answers.weightKg = v==null ? null : (isImperial ? Math.round(v/2.20462*10)/10 : v);
+  };
+  document.getElementById('waist').oninput = e=>{
+    const v = e.target.value ? parseFloat(e.target.value) : null;
+    answers.waistCm = v==null ? null : (isImperial ? Math.round(v*2.54*10)/10 : v);
+  };
+}
+
+function renderCanriskHealthStep(){
+  const c = document.getElementById('qstep-content');
+  const rows = [
+    ['physicallyActive', 'Physically active — like brisk walking — for 30+ minutes most days?', [['true','Yes'],['false','No']]],
+    ['dailyFruitVeg', 'Do you eat vegetables or fruit every day?', [['true','Every day'],['false','Not every day']]],
+    ['highBP', 'Ever told you have high blood pressure, or taken medication for it?', [['true','Yes'],['false','No']]],
+    ['highBloodSugarHx', 'Ever found to have high blood sugar — from a blood test, an illness, or pregnancy?', [['true','Yes'],['false','No']]],
+    ['largeBaby', 'Ever given birth to a baby weighing 9 lb (4.1 kg) or more?', [['true','Yes'],['false','No / not applicable']]],
+  ];
+  c.innerHTML = rows.map(([key,label,opts])=>`
+    <div style="margin-bottom:16px;">
+      <label class="field-label">${label}</label>
+      <div class="option-grid">
+        ${opts.map(([v,l])=>`<div class="opt ${answers[key]===(v==='true')?'selected':''}" data-k="${key}" data-v="${v}">${l}</div>`).join('')}
+      </div>
+    </div>
+  `).join('');
+  c.querySelectorAll('.opt').forEach(el=>{
+    el.onclick = ()=>{
+      answers[el.dataset.k] = el.dataset.v === 'true';
+      renderStep();
+    };
+  });
+}
+
+function renderCanriskBackgroundStep(){
+  const c = document.getElementById('qstep-content');
+  const famOptions = ['Mother','Father','Brother or sister','Child','Other','None / don\'t know'];
+  const ethOptions = ['White','Aboriginal','Black','East Asian','South Asian','Other non-white','Unknown / prefer not to say'];
+  const eduOptions = ['Some high school or less','High school diploma','Some college or university','University or college degree'];
+
+  c.innerHTML = `
+    <div style="margin-bottom:18px;">
+      <label class="field-label">Have any blood relatives been diagnosed with diabetes? Select all that apply.</label>
+      <div class="option-grid" id="fam-grid">${famOptions.map(o=>`<div class="opt ${answers.diabetesFamily.includes(o)?'selected':''}" data-v="${o}">${o}</div>`).join('')}</div>
+    </div>
+    <div style="margin-bottom:18px;">
+      <label class="field-label">Biological mother's ethnicity</label>
+      <div class="option-grid" id="ethMother-grid">${ethOptions.map(o=>`<div class="opt ${answers.ethnicityMother===o?'selected':''}" data-v="${o}">${o}</div>`).join('')}</div>
+    </div>
+    <div style="margin-bottom:18px;">
+      <label class="field-label">Biological father's ethnicity</label>
+      <div class="option-grid" id="ethFather-grid">${ethOptions.map(o=>`<div class="opt ${answers.ethnicityFather===o?'selected':''}" data-v="${o}">${o}</div>`).join('')}</div>
+    </div>
+    <label class="field-label">Highest level of education completed</label>
+    <div class="option-grid" id="edu-grid">${eduOptions.map(o=>`<div class="opt ${answers.education===o?'selected':''}" data-v="${o}">${o}</div>`).join('')}</div>
+  `;
+  c.querySelectorAll('#fam-grid .opt').forEach(el=>{
+    el.onclick = ()=>{
+      toggleMulti(answers.diabetesFamily, el.dataset.v, 'None / don\'t know');
+      renderStep();
+    };
+  });
+  c.querySelectorAll('#ethMother-grid .opt').forEach(el=>{
+    el.onclick = ()=>{ answers.ethnicityMother = el.dataset.v; renderStep(); };
+  });
+  c.querySelectorAll('#ethFather-grid .opt').forEach(el=>{
+    el.onclick = ()=>{ answers.ethnicityFather = el.dataset.v; renderStep(); };
+  });
+  c.querySelectorAll('#edu-grid .opt').forEach(el=>{
+    el.onclick = ()=>{ answers.education = el.dataset.v; renderStep(); };
+  });
+}
+
+function toggleMulti(arr, value, noneValue){
+  if(value === noneValue){
+    arr.length = 0;
+    arr.push(noneValue);
+    return;
+  }
+  const noneIdx = arr.indexOf(noneValue);
+  if(noneIdx > -1) arr.splice(noneIdx,1);
+  const idx = arr.indexOf(value);
+  if(idx > -1) arr.splice(idx,1); else arr.push(value);
+}
+
+function renderSmokingStep(){
+  const c = document.getElementById('qstep-content');
+  const options = [['never','Never smoked'],['former','Former smoker'],['current','Current smoker']];
+  let html = `<div class="option-grid" id="smoking-grid">` + options.map(([v,l])=>
+    `<div class="opt ${answers.smoking===v?'selected':''}" data-v="${v}">${l}</div>`
+  ).join('') + `</div>`;
+
+  if(answers.smoking && answers.smoking !== 'never'){
+    html += `<div class="datefields" style="margin-top:16px;">
+      <div class="df"><label class="field-label" for="ppd">Cigarette packs per day (average)</label>
+        <input type="number" min="0" step="0.1" id="ppd" value="${answers.packsPerDay ?? ''}" placeholder="e.g. 1"></div>
+      <div class="df"><label class="field-label" for="ys">Years smoked (total)</label>
+        <input type="number" min="0" step="1" id="ys" value="${answers.yearsSmoked ?? ''}" placeholder="e.g. 20"></div>
+      ${answers.smoking === 'former' ? `<div class="df"><label class="field-label" for="ysq">Years since you quit</label>
+        <input type="number" min="0" step="1" id="ysq" value="${answers.yearsSinceQuit ?? ''}" placeholder="e.g. 5"></div>` : ''}
+    </div>`;
+  }
+  c.innerHTML = html;
+
+  c.querySelectorAll('#smoking-grid .opt').forEach(el=>{
+    el.onclick = ()=>{
+      answers.smoking = el.dataset.v;
+      if(answers.smoking === 'never'){ answers.packsPerDay = null; answers.yearsSmoked = null; answers.yearsSinceQuit = null; }
+      renderStep();
+    };
+  });
+  const ppd = document.getElementById('ppd');
+  if(ppd) ppd.oninput = e => answers.packsPerDay = e.target.value ? parseFloat(e.target.value) : null;
+  const ys = document.getElementById('ys');
+  if(ys) ys.oninput = e => answers.yearsSmoked = e.target.value ? parseFloat(e.target.value) : null;
+  const ysq = document.getElementById('ysq');
+  if(ysq) ysq.oninput = e => answers.yearsSinceQuit = e.target.value ? parseFloat(e.target.value) : null;
+}
+
+function renderDiabetesLastTestStep(){
+  const c = document.getElementById('qstep-content');
+  c.innerHTML = `<input type="date" id="lastDiabInput" value="${answers.lastDiabetesTest||''}" max="${todayStr()}">
+    <div class="option-grid" id="lastDiab-status-grid" style="margin-top:10px;">
+      <div class="opt opt-small ${answers.lastDiabetesTestStatus==='unsure'?'selected':''}" data-v="unsure">Not sure when</div>
+      <div class="opt opt-small ${answers.lastDiabetesTestStatus==='never'?'selected':''}" data-v="never">Never had one</div>
+    </div>
+    <details class="howto"><summary>What is this?</summary>
+      <p>A1C is a blood test that shows your average blood sugar over the past 2–3 months. A fasting glucose test measures your blood sugar at a single point after not eating for several hours. Either can be used to screen for type 2 diabetes.</p>
+    </details>`;
+  document.getElementById('lastDiabInput').addEventListener('change', e => {
+    answers.lastDiabetesTest = e.target.value || null;
+    if(answers.lastDiabetesTest) answers.lastDiabetesTestStatus = null;
+    renderStep();
+  });
+  c.querySelector('#lastDiab-status-grid').querySelectorAll('.opt').forEach(el=>{
+    el.onclick = ()=>{
+      answers.lastDiabetesTestStatus = el.dataset.v;
+      answers.lastDiabetesTest = null;
+      renderStep();
+    };
+  });
+}
+
+/* ---------------- date helpers ---------------- */
+function todayStr(){ return new Date().toISOString().slice(0,10); }
+function parseDate(s){ return s ? new Date(s+'T00:00:00') : null; }
+function addYears(date, n){ const d = new Date(date); d.setFullYear(d.getFullYear()+n); return d; }
+function fmtDate(d){ return d.toLocaleDateString('en-CA', {year:'numeric',month:'short',day:'numeric'}); }
+function ageNow(dobStr){
+  if(!dobStr) return null;
+  const dob = parseDate(dobStr);
+  const now = new Date();
+  let age = now.getFullYear() - dob.getFullYear();
+  const m = now.getMonth() - dob.getMonth();
+  if(m < 0 || (m === 0 && now.getDate() < dob.getDate())) age--;
+  return age;
+}
+function daysBetween(a,b){ return Math.round((b-a)/86400000); }
+
+const lastTestFields = {
+  breast: { date:'lastMammogram', status:'lastMammogramStatus' },
+  cervix: { date:'lastPap', status:'lastPapStatus' },
+  colon: { date:'lastFIT', status:'lastFITStatus' },
+  diabetes: { date:'lastDiabetesTest', status:'lastDiabetesTestStatus' },
+};
+function formatLastDone(key, status){
+  const f = lastTestFields[key];
+  if(!f || status === 'na' || status === 'unknown') return null;
+  const dateVal = answers[f.date];
+  if(dateVal) return fmtDate(parseDate(dateVal));
+  const statusVal = answers[f.status];
+  if(statusVal === 'never') return 'Never';
+  if(statusVal === 'unsure') return 'Not sure when';
+  return 'Not provided';
+}
+
+/* ---------------- CANRISK scoring ---------------- */
+function bmiOf(a){
+  if(!a.heightCm || !a.weightKg) return null;
+  return a.weightKg / Math.pow(a.heightCm/100, 2);
+}
+
+function hasElevatedDiabetesRisk(a){
+  if(a.highBP || a.highBloodSugarHx || a.largeBaby) return true;
+  if(a.diabetesFamily.some(f => ['Mother','Father','Brother or sister','Child'].includes(f))) return true;
+  const bmi = bmiOf(a);
+  if(bmi !== null && bmi >= 25) return true;
+  if(a.waistCm){
+    const male = a.canriskSex === 'male';
+    if(male && a.waistCm >= 94) return true;
+    if(!male && a.waistCm >= 80) return true;
+  }
+  const ethFlag = ['Aboriginal','Black','East Asian','South Asian','Other non-white'];
+  if(ethFlag.includes(a.ethnicityMother) || ethFlag.includes(a.ethnicityFather)) return true;
+  return false;
+}
+
+function computeCanriskScore(a, age){
+  let total = 0;
+  if(age <= 44) total += 0; else if(age <= 54) total += 7; else if(age <= 64) total += 13; else total += 15;
+  total += a.canriskSex === 'male' ? 6 : 0;
+
+  const bmi = bmiOf(a);
+  if(bmi < 25) total += 0; else if(bmi < 30) total += 4; else if(bmi < 35) total += 9; else total += 14;
+
+  const male = a.canriskSex === 'male';
+  if(male){ if(a.waistCm < 94) total += 0; else if(a.waistCm <= 102) total += 4; else total += 6; }
+  else { if(a.waistCm < 80) total += 0; else if(a.waistCm <= 88) total += 4; else total += 6; }
+
+  total += a.physicallyActive ? 0 : 1;
+  total += a.dailyFruitVeg ? 0 : 2;
+  total += a.highBP ? 4 : 0;
+  total += a.highBloodSugarHx ? 14 : 0;
+  total += a.largeBaby ? 1 : 0;
+
+  const famSet = a.diabetesFamily.filter(f => ['Mother','Father','Brother or sister','Child'].includes(f));
+  total += famSet.length * 2;
+
+  const ethScore = {'White':0,'Aboriginal':3,'Black':5,'East Asian':10,'South Asian':11,'Other non-white':3};
+  const emScore = ethScore[a.ethnicityMother] ?? 0;
+  const efScore = ethScore[a.ethnicityFather] ?? 0;
+  total += Math.max(emScore, efScore);
+
+  const eduScore = {'Some high school or less':5,'High school diploma':1,'Some college or university':0,'University or college degree':0};
+  total += eduScore[a.education] ?? 0;
+
+  let category, message;
+  if(total < 21){
+    category = 'low';
+    message = 'Your risk of having prediabetes or type 2 diabetes is fairly low, though it always pays to maintain a healthy lifestyle.';
+  } else if(total <= 32){
+    category = 'moderate';
+    message = 'Based on your risk factors, your risk of having prediabetes or type 2 diabetes is moderate — you may wish to talk to a healthcare provider about it.';
+  } else {
+    category = 'high';
+    message = 'Based on your risk factors, your risk of having prediabetes or type 2 diabetes is high — you may wish to talk to a healthcare provider about getting your blood sugar tested.';
+  }
+
+  const skippedNotes = [];
+  if(!a.ethnicityMother && !a.ethnicityFather) skippedNotes.push('ethnicity');
+  if(!a.education) skippedNotes.push('education');
+  if(skippedNotes.length) message += ` (${skippedNotes.join(' and ')} not provided, so the score may be a slight underestimate.)`;
+
+  return { total, category, message };
+}
+
+function buildCanriskCard(age){
+  const a = answers;
+  let r = { key:'canrisk', title:'CANRISK — diabetes risk score', learnMoreUrl:'https://www.diabetes.ca/resources/tools---resources/my-risk-for-developing-diabetes' };
+
+  if(age === null){
+    r.status = 'unknown'; r.message = 'Add your birth date to see this.';
+    return r;
+  }
+  const missing = [];
+  if(!a.canriskSex) missing.push('sex');
+  if(!a.heightCm) missing.push('height');
+  if(!a.weightKg) missing.push('weight');
+  if(!a.waistCm) missing.push('waist measurement');
+  if(a.physicallyActive === null) missing.push('activity level');
+  if(a.dailyFruitVeg === null) missing.push('diet habits');
+  if(a.highBP === null) missing.push('blood pressure history');
+  if(a.highBloodSugarHx === null) missing.push('blood sugar history');
+  if(a.largeBaby === null) missing.push('pregnancy history');
+  if(a.diabetesFamily.length === 0) missing.push('family history');
+
+  if(missing.length){
+    r.status = 'ask';
+    r.message = `Answer a few more Diabetes questions (${missing.slice(0,3).join(', ')}${missing.length>3 ? ', …' : ''}) to see your CANRISK score.`;
+    return r;
+  }
+  if(age < 40 || age > 74){
+    r.status = 'ask';
+    r.message = 'CANRISK\'s point score is only validated for ages 40–74, so a number isn\'t shown here — but the risk factors you shared still matter. See the diabetes screening card above for what that means for your testing schedule.';
+    return r;
+  }
+  const score = computeCanriskScore(a, age);
+  r.status = 'score';
+  r.scoreValue = score.total;
+  r.scoreCategory = score.category;
+  r.message = score.message;
+  return r;
+}
+
+/* ---------------- recommendation engine ---------------- */
+function parseAgeBand(s){
+  if(!s) return null;
+  const n = parseInt(s, 10);
+  return isNaN(n) ? null : n;
+}
+
+function buildRecommendations(){
+  const age = ageNow(answers.dob);
+  const recs = [];
+
+/* --- BreastCheck --- */
+if(answers.hasBreastTissue !== false){
+  const famBreast = answers.familyHistory.includes('Breast cancer') || answers.familyHistory.includes('Ovarian cancer');
+  const breastAges = ['Breast cancer','Ovarian cancer'].map(k => parseAgeBand(answers.familyHistoryAges[k])).filter(a => a !== null);
+  const earliestBreastAge = breastAges.length ? Math.min(...breastAges) : null;
+  const suggestedBreastStart = earliestBreastAge !== null ? Math.max(30, earliestBreastAge - 10) : null;
+  let r = { key:'breast', title:'BreastCheck — mammogram', icon:'breast',
+    learnMoreUrl:'https://www.cancercare.mb.ca/breastcheck',
+    requestUrl:'https://www.cancercare.mb.ca/breastcheck', requestLabel:'Book a mammogram' };
+  if(age === null){
+    r.status='unknown'; r.message='Add your birth date to see this.';
+  } else if(age < 40){
+    r.status = famBreast ? 'ask' : 'na';
+    r.message = famBreast
+      ? (suggestedBreastStart !== null
+          ? `You're under 40, but with a relative diagnosed at age ${earliestBreastAge}, some guidelines suggest starting mammograms around age ${suggestedBreastStart} — ask your doctor.`
+          : 'You\'re under 40, but a family history of breast or ovarian cancer is worth discussing with your doctor now — screening can sometimes start earlier.')
+      : 'Not yet applicable at your age for average-risk screening.';
+  } else if(age < 45){
+    r.status = 'ask';
+    r.message = famBreast
+      ? (suggestedBreastStart !== null
+          ? `With a relative diagnosed at age ${earliestBreastAge}, some guidelines suggest starting mammograms around age ${suggestedBreastStart} — ask your doctor for a referral rather than waiting until 45.`
+          : 'Family history plus your age means it\'s worth asking your doctor for a mammogram referral now, rather than waiting until 45.')
+      : 'BreastCheck self-referral starts at 45, but you can ask your doctor for a referral to start earlier if you\'d like.';
+  } else if(age <= 74){
+    r.interval = 2;
+    r.lastDate = answers.lastMammogram;
+    r.message = 'Recommended every 2 years for people aged 45–74 at average risk.';
+    if(famBreast) r.extraNote = earliestBreastAge !== null
+      ? `Your family history (diagnosed at age ${earliestBreastAge}) is worth flagging — some people need more frequent or earlier screening.`
+      : 'Your family history is worth flagging — some people need more frequent or earlier screening.';
+  } else {
+    r.status = 'ask';
+    r.message = 'Routine screening mammograms aren\'t automatically recommended past 74 — talk to your doctor about whether to continue.';
+  }
+  recs.push(finalizeRec(r));
+}
+
+/* --- CervixCheck --- */
+if(answers.hasCervix !== false){
+  const famCervix = answers.familyHistory.includes('Cervical cancer');
+  const cervixAge = parseAgeBand(answers.familyHistoryAges['Cervical cancer']);
+  let r = { key:'cervix', title:'CervixCheck — Pap / HPV test', icon:'cervix',
+    learnMoreUrl:'https://www.cancercare.mb.ca/screening/info/cervix',
+    requestUrl:'https://www.cancercare.mb.ca/screening/info/cervix', requestLabel:'Find a Pap clinic / HPV kit' };
+  if(age === null){
+    r.status='unknown'; r.message='Add your birth date to see this.';
+  } else if(answers.everSexuallyActive === false){
+    r.status='ask';
+    r.message='Guidelines generally apply to people who\'ve been sexually active — ask your doctor whether screening still makes sense for you.';
+  } else if(age < 21){
+    r.status='na'; r.message='Not yet applicable at your age.';
+  } else if(age <= 69){
+    r.interval = 3;
+    r.lastDate = answers.lastPap;
+    r.message = 'Recommended every 3 years for ages 21–69 who\'ve ever been sexually active. HPV self-screening kits are also available in Manitoba as an alternative to an in-clinic Pap test.';
+    if(famCervix) r.extraNote = cervixAge !== null
+      ? `A family history of cervical cancer (diagnosed at age ${cervixAge}) is worth mentioning to your doctor.`
+      : 'A family history of cervical cancer is worth mentioning to your doctor.';
+  } else {
+    r.status='ask';
+    r.message = 'Screening can often stop at 69 if past results have been consistently normal — confirm with your doctor.';
+  }
+  recs.push(finalizeRec(r));
+}
+
+/* --- ColonCheck --- */
+{
+  const famColon = answers.familyHistory.includes('Colorectal cancer');
+  const colonAge = parseAgeBand(answers.familyHistoryAges['Colorectal cancer']);
+  const suggestedColonStart = colonAge !== null ? Math.min(40, colonAge - 10) : null;
+  let r = { key:'colon', title:'ColonCheck — FIT test', icon:'colon',
+    learnMoreUrl:'https://www.cancercare.mb.ca/coloncheck',
+    requestUrl:'https://www.cancercare.mb.ca/screening/info/colon/request', requestLabel:'Request a FIT kit' };
+  if(age === null){
+    r.status='unknown'; r.message='Add your birth date to see this.';
+  } else if(age < 50){
+    r.status = famColon ? 'ask' : 'na';
+    r.message = famColon
+      ? (suggestedColonStart !== null
+          ? `With a relative diagnosed at age ${colonAge}, guidelines often suggest starting screening around age ${suggestedColonStart} — ask your doctor about timing.`
+          : 'A first-degree relative with colorectal cancer often means screening should start earlier than 50 — ask your doctor about timing.')
+      : 'Not yet applicable at your age for average-risk screening.';
+  } else if(age <= 74){
+    r.interval = 2;
+    r.lastDate = answers.lastFIT;
+    r.message = 'Recommended every 2 years for ages 50–74 at average risk, using an at-home FIT kit.';
+    if(famColon) r.extraNote = colonAge !== null
+      ? `With a family history (diagnosed at age ${colonAge}), your doctor may recommend colonoscopy instead of, or alongside, FIT.`
+      : 'With a family history, your doctor may recommend colonoscopy instead of, or alongside, FIT.';
+  } else {
+    r.status='ask';
+    r.message = 'Talk to your doctor about whether to continue screening past 74, based on your overall health.';
+  }
+  recs.push(finalizeRec(r));
+}
+
+  /* --- Diabetes screening timing --- */
+  {
+    const hasRisk = hasElevatedDiabetesRisk(answers);
+    let r = { key:'diabetes', title:'Type 2 diabetes screening', icon:'diabetes',
+      learnMoreUrl:'https://guidelines.diabetes.ca/screening' };
+    if(age === null){
+      r.status='unknown'; r.message='Add your birth date to see this.';
+    } else if(age >= 40){
+      r.interval = 3;
+      r.lastDate = answers.lastDiabetesTest;
+      r.message = 'Recommended at least every 3 years from age 40, using a fasting glucose and/or A1C blood test.';
+      if(hasRisk) r.extraNote = 'With your risk factors, your doctor may suggest testing more often — every 6–12 months in some cases.';
+    } else if(hasRisk){
+      r.interval = 3;
+      r.lastDate = answers.lastDiabetesTest;
+      r.message = 'Your risk factors mean testing is reasonable now, even under 40 — every 3 years, or more often if your doctor advises.';
+    } else {
+      r.status='na';
+      r.message = 'Not yet routinely recommended under 40 with no risk factors — this can change if your health history changes.';
+    }
+    recs.push(finalizeRec(r));
+  }
+
+  /* --- Lipid / cholesterol screening --- */
+  {
+    const lipidRisk = answers.highBP === true || answers.highBloodSugarHx === true || answers.smoking === 'current';
+    let r = { key:'lipid', title:'Cholesterol / lipid screening', icon:'lipid',
+      learnMoreUrl:'https://ccs.ca/guideline/2021-lipids/chapter-3-overview-of-the-management-of-dyslipidemia-in-primary-prevention/' };
+    if(age === null){
+      r.status='unknown'; r.message='Add your birth date to see this.';
+    } else if(age >= 40){
+      r.status='ask';
+      r.message = 'Recommended every 5 years for adults 40+ at average risk — a simple blood test, fasting or non-fasting. More often if you have risk factors like high blood pressure, high blood sugar, or smoking.';
+    } else if(lipidRisk){
+      r.status='ask';
+      r.message = 'You\'re under 40, but the risk factors you shared (blood pressure, blood sugar, or smoking) mean cholesterol screening is worth asking about now rather than waiting until 40.';
+    } else {
+      r.status='na';
+      r.message = 'Not yet routinely recommended under 40 without other cardiovascular risk factors.';
+    }
+    recs.push(r);
+  }
+
+  /* --- AAA screening --- */
+  {
+    let r = { key:'aaa', title:'AAA screening (abdominal aortic aneurysm)', icon:'aaa',
+      learnMoreUrl:'https://canadiantaskforce.ca/guidelines/published-guidelines/abdominal-aortic-aneurysm/' };
+    const sex = answers.canriskSex;
+    if(age === null){
+      r.status='unknown'; r.message='Add your birth date to see this.';
+    } else if(!sex){
+      r.status='ask';
+      r.message = 'This depends on sex assigned at birth — answer the Diabetes body-measurements question to see this here, or ask your doctor directly.';
+    } else if(sex === 'female'){
+      r.status='na';
+      r.message = 'Routine AAA screening isn\'t recommended for women — the evidence doesn\'t clearly show a benefit.';
+    } else if(age < 65){
+      r.status='na';
+      r.message = 'Not yet applicable — this is a one-time screen recommended starting at 65.';
+    } else if(age <= 80){
+      r.status='ask';
+      r.message = 'A one-time ultrasound is recommended for men aged 65–80, regardless of smoking history — ask your doctor if you haven\'t had one.';
+    } else {
+      r.status='na';
+      r.message = 'Not recommended past 80, when the benefits of screening are smaller.';
+    }
+    recs.push(r);
+  }
+
+  /* --- Lung cancer screening --- */
+  {
+    let r = { key:'lung', title:'Lung cancer screening (LDCT)', icon:'lung',
+      learnMoreUrl:'https://canadiantaskforce.ca/tools-resources/' };
+    const py = (answers.packsPerDay && answers.yearsSmoked) ? (answers.packsPerDay * answers.yearsSmoked) : null;
+    if(age === null){
+      r.status='unknown'; r.message='Add your birth date to see this.';
+    } else if(!answers.smoking){
+      r.status='ask';
+      r.message = 'Answer the smoking history question to see whether you meet the criteria for lung cancer screening.';
+    } else if(age >= 75){
+      r.status='na';
+      r.message = 'Routine screening isn\'t recommended at 75+ — there\'s no evidence the benefits outweigh the harms at this age.';
+    } else if(age < 55){
+      r.status='na';
+      r.message = 'Not yet applicable — routine screening starts at 55.';
+    } else {
+      const quitOk = answers.smoking === 'current' || (answers.smoking === 'former' && answers.yearsSinceQuit !== null && answers.yearsSinceQuit <= 15);
+      if(answers.smoking !== 'never' && quitOk && py !== null && py >= 30){
+        r.status='ask';
+        r.message = `With an estimated ${py.toFixed(1)} pack-years, you meet the criteria for three annual low-dose CT (LDCT) screens — ask your doctor for an imaging requisition (a chest X-ray isn't a substitute).`;
+      } else {
+        r.status='na';
+        r.message = 'Routine screening isn\'t recommended — it requires a 30+ pack-year history and being a current smoker, or having quit within the last 15 years. A family history of lung cancer or exposure to radon/asbestos doesn\'t change this on its own.';
+      }
+    }
+    r.extraNote = 'This assumes no symptoms. An unexplained cough, chest or shoulder pain, weight loss, coughing blood, hoarseness, or breathlessness lasting more than 3 weeks should be raised with your doctor directly, regardless of screening eligibility.';
+    recs.push(r);
+  }
+
+  /* --- CANRISK score --- */
+  recs.push(buildCanriskCard(age));
+
+  return recs;
+}
+
+function finalizeRec(r){
+  if(r.status){ return r; } // already resolved (na / ask / unknown)
+  if(!r.lastDate){
+    r.status = 'due';
+    r.dueDate = new Date();
+    r.progress = 0;
+  } else {
+    const last = parseDate(r.lastDate);
+    const due = addYears(last, r.interval);
+    const now = new Date();
+    r.dueDate = due;
+    const totalDays = due - last;
+    const elapsed = now - last;
+    r.progress = Math.max(0, Math.min(1, elapsed/totalDays));
+    if(due <= now){
+      r.status = 'due';
+    } else if(daysBetween(now, due) <= 60){
+      r.status = 'upcoming';
+    } else {
+      r.status = 'ok';
+    }
+  }
+  return r;
+}
+
+/* ---------------- results rendering ---------------- */
+const statusMeta = {
+  due: {label:'Due now', pillClass:'due'},
+  upcoming: {label:'Due soon', pillClass:'upcoming'},
+  ok: {label:'Up to date', pillClass:'ok'},
+  na: {label:'Not applicable', pillClass:'na'},
+  ask: {label:'Ask your doctor', pillClass:'ask'},
+  unknown: {label:'Add birth date', pillClass:'na'},
+  score: {label:'Calculated', pillClass:'ok'},
+};
+
+let currentRecs = [];
+
+function computeAndShowResults(){
+  currentRecs = buildRecommendations();
+  showScreen('screen-results');
+  renderResults();
+}
+
+function renderResults(){
+  const age = ageNow(answers.dob);
+  document.getElementById('printDate').textContent = 'Generated ' + new Date().toLocaleDateString('en-CA', {year:'numeric',month:'long',day:'numeric'}) + (profileName ? ' · ' + profileName : '') + ' · Checkpoint MB';
+  const trailWrapEl = document.getElementById('trailWrap');
+  const trailW = trailWrapEl.clientWidth || 800;
+  trailWrapEl.innerHTML = buildTrailSvg(age, trailW);
+  attachTrailTooltips();
+
+  const grid = document.getElementById('resultsGrid');
+  grid.innerHTML = currentRecs.map(r => {
+    const meta = statusMeta[r.status];
+
+    if(r.key === 'canrisk' && r.status === 'score'){
+      return `<div class="rcard">
+        <div class="rtop"><h3>${r.title}</h3><span class="pill ${meta.pillClass}">${meta.label}</span></div>
+        <div class="scorebox"><span class="num">${r.scoreValue}</span><span class="cat ${r.scoreCategory}">${r.scoreCategory} risk</span></div>
+        <p class="desc">${r.message}</p>
+        <div class="actions"><a class="miniBtn no-print" href="${r.learnMoreUrl}" target="_blank" rel="noopener" style="text-decoration:none;">Learn more →</a></div>
+        <p class="source">Calculated in-browser using the Public Health Agency of Canada's CANRISK questionnaire (2011). Not a substitute for a blood test.</p>
+      </div>`;
+    }
+
+    const lastDoneText = formatLastDone(r.key, r.status);
+    let progressHtml = '';
+    if(r.interval && r.status !== 'na' && r.status !== 'unknown'){
+      const pct = Math.round((r.progress ?? 0) * 100);
+      progressHtml = `<div class="minitrack"><div class="fill" style="width:${pct}%"></div></div>
+        <div class="meta">${lastDoneText ? `Last done: ${lastDoneText} · ` : ''}Next due: ${fmtDate(r.dueDate)}</div>`;
+    } else if(lastDoneText){
+      progressHtml = `<div class="meta">Last done: ${lastDoneText}</div>`;
+    }
+    const reminderBtn = (r.interval && r.status !== 'na' && r.status !== 'unknown')
+      ? `<button class="miniBtn no-print" onclick="downloadIcs('${r.key}')">Add reminder to calendar</button>` : '';
+    const learnMoreBtn = r.learnMoreUrl
+      ? `<a class="miniBtn no-print" href="${r.learnMoreUrl}" target="_blank" rel="noopener" style="text-decoration:none;">Learn more →</a>` : '';
+    const requestBtn = (r.requestUrl && r.status !== 'na' && r.status !== 'unknown')
+      ? `<a class="miniBtn no-print" href="${r.requestUrl}" target="_blank" rel="noopener" style="text-decoration:none;">${r.requestLabel} →</a>` : '';
+    const actions = (reminderBtn || learnMoreBtn || requestBtn) ? `<div class="actions">${reminderBtn}${requestBtn}${learnMoreBtn}</div>` : '';
+    const sources = {
+      breast: 'CancerCare Manitoba (BreastCheck)', cervix: 'CancerCare Manitoba (CervixCheck)',
+      colon: 'CancerCare Manitoba (ColonCheck)', diabetes: 'Diabetes Canada guidelines',
+      lipid: 'Canadian Cardiovascular Society (2021)', aaa: 'Canadian Task Force on Preventive Health Care (2017)',
+      lung: 'Provincial lung cancer screening referral criteria',
+    };
+    return `<div class="rcard">
+      <div class="rtop"><h3>${r.title}</h3><span class="pill ${meta.pillClass}">${meta.label}</span></div>
+      <p class="desc">${r.message}</p>
+      ${r.extraNote ? `<p class="desc" style="color:var(--clay);">${r.extraNote}</p>` : ''}
+      ${progressHtml}
+      ${actions}
+      <p class="source">Source: ${sources[r.key] || 'CancerCare Manitoba / Diabetes Canada guidelines'}</p>
+    </div>`;
+  }).join('');
+
+  document.getElementById('bonusPanel').innerHTML = buildBonusPanel();
+}
+
+const trailNotes = {
+  21: 'Cervix Check\nPap/HPV screening can start (ages 21–69).',
+  40: 'Diabetes\nA1C or fasting glucose recommended every 3 years from here.',
+  45: 'Breast Check\nBreastCheck mammograms every 2 years can start.',
+  50: 'Colon Check\nColonCheck FIT every 2 years starts here.',
+  69: 'Cervix Check\nScreening can often stop here if past results are normal.',
+  74: 'Breast &amp; Colon Check\nRoutine screening typically stops here — ask your doctor.',
+};
+
+function buildTrailSvg(age, containerW){
+  const marks = [21,40,45,50,69,74];
+  const min = 18, max = 80;
+  const w = Math.max(containerW || 800, 520), h = 60;
+  const x = v => 20 + ((v-min)/(max-min))*(w-40);
+  let ticks = marks.map(m => `
+    <g class="tick-hit" tabindex="0" role="button" aria-label="${trailNotes[m].split('\n').join(': ')}" data-msg="${trailNotes[m]}">
+      <circle cx="${x(m)}" cy="29" r="16" fill="transparent"/>
+      <line x1="${x(m)}" x2="${x(m)}" y1="24" y2="34" style="stroke:var(--line)" stroke-width="2"/>
+      <text x="${x(m)}" y="50" font-size="11" font-family="IBM Plex Mono" style="fill:var(--muted)" text-anchor="middle">${m}</text>
+    </g>
+  `).join('');
+  let pin = '';
+  if(age !== null){
+    const cx = x(Math.max(min, Math.min(max, age)));
+    pin = `<circle cx="${cx}" cy="29" r="7" style="fill:var(--gold);stroke:var(--teal)" stroke-width="2"/>
+           <text x="${cx}" y="16" font-size="12" font-family="IBM Plex Mono" style="fill:var(--teal)" text-anchor="middle" font-weight="600">age ${age}</text>`;
+  }
+  return `<svg class="trail-svg" viewBox="0 0 ${w} ${h}" width="${w}" height="${h}" xmlns="http://www.w3.org/2000/svg">
+    <line x1="20" x2="${w-20}" y1="29" y2="29" style="stroke:var(--line)" stroke-width="3" stroke-linecap="round"/>
+    ${ticks}
+    ${pin}
+  </svg>
+  <div class="trail-caption">Screening milestones across adulthood, with your current age marked — hover or tap a milestone for details.</div>`;
+}
+
+function attachTrailTooltips(){
+  const tooltip = document.getElementById('trailTooltip');
+  const hits = document.querySelectorAll('#trailWrap .tick-hit');
+  const showTip = (el) => {
+    const [label, body] = el.dataset.msg.split('\n');
+    tooltip.innerHTML = `<b>${label}</b>${body}`;
+    const rect = el.getBoundingClientRect();
+    tooltip.style.left = (rect.left + rect.width/2) + 'px';
+    tooltip.style.top = (rect.top - 10) + 'px';
+    tooltip.style.transform = 'translate(-50%, -100%)';
+    tooltip.classList.add('show');
+  };
+  const hideTip = () => tooltip.classList.remove('show');
+
+  hits.forEach(el => {
+    el.addEventListener('mouseenter', () => showTip(el));
+    el.addEventListener('mouseleave', hideTip);
+    el.addEventListener('focus', () => showTip(el));
+    el.addEventListener('blur', hideTip);
+    el.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if(tooltip.classList.contains('show')){ hideTip(); } else { showTip(el); }
+    });
+    el.addEventListener('keydown', (e) => {
+      if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); showTip(el); }
+    });
+  });
+  document.addEventListener('click', hideTip);
+}
+
+let trailResizeTimer;
+window.addEventListener('resize', () => {
+  clearTimeout(trailResizeTimer);
+  trailResizeTimer = setTimeout(() => {
+    const resultsScreen = document.getElementById('screen-results');
+    if(resultsScreen && resultsScreen.classList.contains('active')){
+      const age = ageNow(answers.dob);
+      const trailWrapEl = document.getElementById('trailWrap');
+      trailWrapEl.innerHTML = buildTrailSvg(age, trailWrapEl.clientWidth || 800);
+      attachTrailTooltips();
+    }
+  }, 200);
+});
+
+function buildBonusPanel(){
+  const items = [];
+  items.push('Blood pressure check — worth doing at every visit, regardless of age.');
+
+  items.push('Manitoba doesn\'t run an organized prostate screening program — this is an individual discussion with your doctor, based on your personal risk.');
+
+  const vaxAge = ageNow(answers.dob);
+  if(vaxAge !== null){
+    if(vaxAge >= 50) items.push('Shingles (herpes zoster) vaccine — recommended from age 50; ask your pharmacist or doctor about Shingrix.');
+    if(vaxAge >= 65) items.push('Pneumococcal vaccine — recommended from age 65 if you haven\'t already had one.');
+  }
+
+  const excluded = [
+    'Osteoporosis / fragility fracture screening — needs a validated risk-tool (like FRAX) rather than a simple age cutoff, so it\'s left out to avoid a rough guess.',
+    'Prostate (PSA) screening — no organized Manitoba program, and guidelines don\'t recommend routine testing due to overdiagnosis risk. Best as a direct conversation with your doctor.',
+    'STI screening (chlamydia/gonorrhea) — generally recommended annually if sexually active under 25, or with new/multiple partners. Left out here to avoid asking overly personal follow-up questions.',
+  ];
+
+  const notRecommended = currentRecs
+    .filter(r => r.status === 'na')
+    .map(r => `${r.title} — ${r.message}`);
+
+  return `<div class="bonus"><h3>Also worth asking about</h3><ul>${items.map(i=>`<li>${i}</li>`).join('')}</ul></div>
+    <div class="bonus"><h3>Not covered by this tool</h3><ul>${excluded.map(i=>`<li>${i}</li>`).join('')}</ul></div>
+    ${notRecommended.length ? `<div class="bonus"><h3>Not recommended for you</h3><ul>${notRecommended.map(i=>`<li>${i}</li>`).join('')}</ul></div>` : ''}`;
+}
+
+/* ---------------- ICS reminder generation ---------------- */
+function downloadIcs(key){
+  const r = currentRecs.find(x => x.key === key);
+  if(!r || !r.dueDate) return;
+  const d = r.dueDate;
+  const dateStr = d.toISOString().slice(0,10).replace(/-/g,'');
+  const uid = key + '-' + Date.now() + '@checkpointmb';
+  const ics = [
+    'BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Checkpoint MB//EN','BEGIN:VEVENT',
+    `UID:${uid}`,
+    `DTSTAMP:${dateStr}T090000Z`,
+    `DTSTART;VALUE=DATE:${dateStr}`,
+    `SUMMARY:${r.title} — screening due`,
+    `DESCRIPTION:${r.message.replace(/,/g,'\\,')}`,
+    'BEGIN:VALARM','TRIGGER:-P7D','ACTION:DISPLAY','DESCRIPTION:Reminder','END:VALARM',
+    'END:VEVENT','END:VCALENDAR'
+  ].join('\r\n');
+  const blob = new Blob([ics], {type:'text/calendar'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = `${key}-reminder.ics`;
+  document.body.appendChild(a); a.click(); a.remove();
+  URL.revokeObjectURL(url);
+  showToast('Reminder file downloaded — open it to add to your calendar.');
+}
+
+/* ---------------- profile save / load ---------------- */
+function saveProfile(){
+  profileName = document.getElementById('nameInput').value.trim();
+  const payload = { answers, profileName, savedAt: new Date().toISOString() };
+  try{
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(payload));
+    showToast('Profile saved.');
+    renderReminderPanel();
+    checkForSavedProfile();
+  } catch(e){
+    showToast('Could not save — try again.');
+  }
+}
+
+function checkForSavedProfile(){
+  try{
+    if(localStorage.getItem(STORAGE_KEY)){
+      document.getElementById('continueBtn').style.display = 'inline-block';
+      document.getElementById('savedBtn').style.display = 'inline-block';
+    }
+  } catch(e){
+    // storage unavailable (e.g. private browsing) — nothing to show
+  }
+}
+
+function loadSavedAndShowResults(){
+  const raw = localStorage.getItem(STORAGE_KEY);
+  if(!raw){ showToast('No saved profile found.'); return; }
+  try{
+    const payload = JSON.parse(raw);
+    answers = Object.assign(answers, payload.answers);
+    profileName = payload.profileName || '';
+    document.getElementById('nameInput').value = profileName;
+    computeAndShowResults();
+    renderReminderPanel();
+  } catch(e){
+    showToast('No saved profile found.');
+  }
+}
+
+function renderReminderPanel(){
+  const panel = document.getElementById('reminderPanel');
+  const list = document.getElementById('reminderList');
+  const upcoming = currentRecs
+    .filter(r => r.dueDate && (r.status === 'due' || r.status === 'upcoming' || r.status === 'ok'))
+    .sort((a,b) => a.dueDate - b.dueDate);
+  if(upcoming.length === 0){ panel.style.display='none'; return; }
+  panel.style.display = 'block';
+  list.innerHTML = upcoming.map(r => `<div class="reminder-item">
+    <span>${r.title}</span><span class="rdate">${fmtDate(r.dueDate)}</span>
+  </div>`).join('');
+}
+
+function restart(){
+  answers = {
+    dob: null, hasCervix: null, everSexuallyActive: null, hasBreastTissue: null,
+    familyHistory: [], familyHistoryAges: {}, smoking: null, packsPerDay: null,
+    yearsSmoked: null, yearsSinceQuit: null,
+    lastPap: null, lastPapStatus: null, lastMammogram: null, lastMammogramStatus: null,
+    lastFIT: null, lastFITStatus: null, lastDiabetesTest: null, lastDiabetesTestStatus: null,
+    unitSystem: 'metric', canriskSex: null, heightCm: null, weightKg: null, waistCm: null,
+    physicallyActive: null, dailyFruitVeg: null, highBP: null, highBloodSugarHx: null,
+    largeBaby: null, diabetesFamily: [], ethnicityMother: null, ethnicityFather: null, education: null,
+  };
+  showScreen('screen-intro');
+}
+
+function showToast(msg){
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'), 2600);
+}
+
+document.getElementById('savedBtn').addEventListener('click', ()=>{
+  showScreen('screen-intro');
+  loadSavedAndShowResults();
+});
+
+document.getElementById('disclaimerCheck').addEventListener('change', e => {
+  document.getElementById('startBtn').disabled = !e.target.checked;
+  document.getElementById('continueBtn').disabled = !e.target.checked;
+});
+
+/* ============ DEV ONLY: delete this whole block before shipping ============ */
+function fillDevTestPatient(){
+  const dob = new Date(); dob.setFullYear(dob.getFullYear() - 68);
+  const fitDate = new Date(); fitDate.setDate(fitDate.getDate() - 365 * 3); // overdue
+
+  answers = {
+    dob: dob.toISOString().slice(0,10),
+    hasCervix: true, everSexuallyActive: true,
+    lastPap: null, lastPapStatus: 'unsure',
+    hasBreastTissue: true, lastMammogram: null, lastMammogramStatus: 'never',
+    lastFIT: fitDate.toISOString().slice(0,10), lastFITStatus: null,
+    familyHistory: ['Breast cancer','Colorectal cancer'],
+    familyHistoryAges: { 'Breast cancer': '42', 'Colorectal cancer': '38' },
+    smoking: 'current', packsPerDay: 1.5, yearsSmoked: 30, yearsSinceQuit: null,
+    lastDiabetesTest: null, lastDiabetesTestStatus: null,
+    unitSystem: 'metric', canriskSex: 'male', heightCm: 175, weightKg: 95, waistCm: 105,
+    physicallyActive: false, dailyFruitVeg: false, highBP: true, highBloodSugarHx: true,
+    largeBaby: false, diabetesFamily: ['Mother','Father'],
+    ethnicityMother: 'South Asian', ethnicityFather: null, education: 'Some high school or less',
+  };
+  profileName = 'Test Patient';
+  computeAndShowResults();
+}
+document.getElementById('devFillBtn').addEventListener('click', fillDevTestPatient);
+/* ============ END DEV ONLY ============ */
+
+/* init */
+checkForSavedProfile();
+</script>
+</body>
+</html>
