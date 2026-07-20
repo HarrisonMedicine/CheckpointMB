@@ -31,7 +31,7 @@
     --sage-soft: #DEEBDF;
     --line: #DAD4C6;
     --line-soft: #E9E5D9;
-    --muted: #8b9490;
+    --muted: #5c6864;
     --radius: 14px;
   }
   *{box-sizing:border-box;}
@@ -157,6 +157,17 @@
   .df label.field-label{margin-top:0;}
 
   .nav-row{display:flex;justify-content:space-between;margin-top:26px;align-items:center;}
+  @media (max-width:640px){
+    #screen-quiz .nav-row{
+      position:fixed;left:0;right:0;bottom:0;z-index:40;
+      background:var(--bg-raised);border-top:1px solid var(--line-soft);
+      padding:12px 20px calc(12px + env(safe-area-inset-bottom));
+      margin-top:0;
+      box-shadow:0 -4px 16px rgba(30,42,40,.08);
+    }
+    #screen-quiz .card{padding-bottom:96px;}
+    #devFillBtn{bottom:auto !important;top:14px !important;left:auto !important;right:14px !important;}
+  }
   .skip-link{background:none;border:none;color:var(--ink-soft);text-decoration:underline;font-size:13px;cursor:pointer;padding:8px;}
 
   .missing-warning{
@@ -182,6 +193,12 @@
 
   .results-grid{display:grid;grid-template-columns:1fr;gap:16px;margin-top:8px;}
   @media(min-width:640px){.results-grid{grid-template-columns:1fr 1fr;}}
+  .result-category{margin-top:26px;}
+  .result-category:first-child{margin-top:0;}
+  .category-heading{
+    font-family:'IBM Plex Mono';font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;
+    color:var(--teal);margin:0 0 4px;padding-bottom:6px;border-bottom:1px solid var(--line-soft);
+  }
 
   .rcard{
     border:1px solid var(--line-soft);border-radius:var(--radius);padding:20px;background:var(--bg-raised);
@@ -272,10 +289,12 @@
     #printDate{display:block !important;margin:2px 0 4px !important;}
     .eyebrow{font-size:10px;}
     .card{border:1px solid #ccc;box-shadow:none;break-inside:avoid;padding:10px;margin-top:6px;}
-    .results-grid{grid-template-columns:1fr 1fr;gap:8px;margin-top:6px;}
-    .rcard{padding:9px 11px;gap:5px;break-inside:avoid;}
-    .rcard h3{font-size:12.5px;}
-    .rcard p.desc{font-size:10.5px;line-height:1.4;}
+    .result-category{margin-top:7px;}
+    .category-heading{font-size:8.5px;margin-bottom:1px;padding-bottom:1px;}
+    .results-grid{grid-template-columns:1fr 1fr;gap:6px;margin-top:4px;}
+    .rcard{padding:7px 10px;gap:4px;break-inside:avoid;}
+    .rcard h3{font-size:12px;}
+    .rcard p.desc{font-size:10px;line-height:1.32;}
     .rcard .meta, .rcard .source{font-size:9px;}
     .rcard .actions{display:none;}
     .minitrack{height:4px;margin-top:1px;}
@@ -382,7 +401,7 @@
         <span class="print-only" style="font-size:13px;">gov.mb.ca/health/familydoctorfinder — or call 1-866-690-8260</span>
       </div>
 
-      <div class="results-grid" id="resultsGrid"></div>
+      <div id="resultsGrid"></div>
 
       <div class="bonus" id="bonusPanel"></div>
 
@@ -1432,6 +1451,57 @@ function computeAndShowResults(){
   renderResults();
 }
 
+function buildResultCardHtml(r){
+  const meta = statusMeta[r.status];
+
+  if(r.key === 'canrisk' && r.status === 'score'){
+    return `<div class="rcard">
+      <div class="rtop"><h3>${r.title}</h3><span class="pill ${meta.pillClass}">${meta.label}</span></div>
+      <div class="scorebox"><span class="num">${r.scoreValue}</span><span class="cat ${r.scoreCategory}">${r.scoreCategory} risk</span></div>
+      <p class="desc">${r.message}</p>
+      <div class="actions"><a class="miniBtn no-print" href="${r.learnMoreUrl}" target="_blank" rel="noopener" style="text-decoration:none;">Learn more →</a></div>
+      <p class="source">Calculated in-browser using the Public Health Agency of Canada's CANRISK questionnaire (2011). Not a substitute for a blood test.</p>
+    </div>`;
+  }
+
+  const lastDoneText = formatLastDone(r.key, r.status);
+  let progressHtml = '';
+  if(r.interval && r.status !== 'na' && r.status !== 'unknown'){
+    const pct = Math.round((r.progress ?? 0) * 100);
+    progressHtml = `<div class="minitrack"><div class="fill" style="width:${pct}%"></div></div>
+      <div class="meta">${lastDoneText ? `Last done: ${lastDoneText} · ` : ''}Next due: ${fmtDate(r.dueDate)}</div>`;
+  } else if(lastDoneText){
+    progressHtml = `<div class="meta">Last done: ${lastDoneText}</div>`;
+  }
+  const reminderBtn = (r.interval && r.status !== 'na' && r.status !== 'unknown')
+    ? `<button class="miniBtn no-print" onclick="downloadIcs('${r.key}')">Add reminder to calendar</button>` : '';
+  const learnMoreBtn = r.learnMoreUrl
+    ? `<a class="miniBtn no-print" href="${r.learnMoreUrl}" target="_blank" rel="noopener" style="text-decoration:none;">Learn more →</a>` : '';
+  const requestBtn = (r.requestUrl && r.status !== 'na' && r.status !== 'unknown')
+    ? `<a class="miniBtn no-print" href="${r.requestUrl}" target="_blank" rel="noopener" style="text-decoration:none;">${r.requestLabel} →</a>` : '';
+  const actions = (reminderBtn || learnMoreBtn || requestBtn) ? `<div class="actions">${reminderBtn}${requestBtn}${learnMoreBtn}</div>` : '';
+  const sources = {
+    breast: 'CancerCare Manitoba (BreastCheck)', cervix: 'CancerCare Manitoba (CervixCheck)',
+    colon: 'CancerCare Manitoba (ColonCheck)', diabetes: 'Diabetes Canada guidelines',
+    lipid: 'Canadian Cardiovascular Society (2021)', aaa: 'Canadian Task Force on Preventive Health Care (2017)',
+    lung: 'Provincial lung cancer screening referral criteria',
+  };
+  return `<div class="rcard">
+    <div class="rtop"><h3>${r.title}</h3><span class="pill ${meta.pillClass}">${meta.label}</span></div>
+    <p class="desc">${r.message}</p>
+    ${r.extraNote ? `<p class="desc" style="color:var(--clay);">${r.extraNote}</p>` : ''}
+    ${progressHtml}
+    ${actions}
+    <p class="source">Source: ${sources[r.key] || 'CancerCare Manitoba / Diabetes Canada guidelines'}</p>
+  </div>`;
+}
+
+const resultCategories = [
+  { label: 'Cancer screenings', keys: ['breast','cervix','colon','lung'] },
+  { label: 'Diabetes', keys: ['diabetes','canrisk'] },
+  { label: 'Heart & vascular', keys: ['lipid','aaa'] },
+];
+
 function renderResults(){
   const age = ageNow(answers.dob);
   document.getElementById('printDate').textContent = 'Generated ' + new Date().toLocaleDateString('en-CA', {year:'numeric',month:'long',day:'numeric'}) + (profileName ? ' · ' + profileName : '') + ' · Checkpoint MB';
@@ -1441,48 +1511,12 @@ function renderResults(){
   attachTrailTooltips();
 
   const grid = document.getElementById('resultsGrid');
-  grid.innerHTML = currentRecs.map(r => {
-    const meta = statusMeta[r.status];
-
-    if(r.key === 'canrisk' && r.status === 'score'){
-      return `<div class="rcard">
-        <div class="rtop"><h3>${r.title}</h3><span class="pill ${meta.pillClass}">${meta.label}</span></div>
-        <div class="scorebox"><span class="num">${r.scoreValue}</span><span class="cat ${r.scoreCategory}">${r.scoreCategory} risk</span></div>
-        <p class="desc">${r.message}</p>
-        <div class="actions"><a class="miniBtn no-print" href="${r.learnMoreUrl}" target="_blank" rel="noopener" style="text-decoration:none;">Learn more →</a></div>
-        <p class="source">Calculated in-browser using the Public Health Agency of Canada's CANRISK questionnaire (2011). Not a substitute for a blood test.</p>
-      </div>`;
-    }
-
-    const lastDoneText = formatLastDone(r.key, r.status);
-    let progressHtml = '';
-    if(r.interval && r.status !== 'na' && r.status !== 'unknown'){
-      const pct = Math.round((r.progress ?? 0) * 100);
-      progressHtml = `<div class="minitrack"><div class="fill" style="width:${pct}%"></div></div>
-        <div class="meta">${lastDoneText ? `Last done: ${lastDoneText} · ` : ''}Next due: ${fmtDate(r.dueDate)}</div>`;
-    } else if(lastDoneText){
-      progressHtml = `<div class="meta">Last done: ${lastDoneText}</div>`;
-    }
-    const reminderBtn = (r.interval && r.status !== 'na' && r.status !== 'unknown')
-      ? `<button class="miniBtn no-print" onclick="downloadIcs('${r.key}')">Add reminder to calendar</button>` : '';
-    const learnMoreBtn = r.learnMoreUrl
-      ? `<a class="miniBtn no-print" href="${r.learnMoreUrl}" target="_blank" rel="noopener" style="text-decoration:none;">Learn more →</a>` : '';
-    const requestBtn = (r.requestUrl && r.status !== 'na' && r.status !== 'unknown')
-      ? `<a class="miniBtn no-print" href="${r.requestUrl}" target="_blank" rel="noopener" style="text-decoration:none;">${r.requestLabel} →</a>` : '';
-    const actions = (reminderBtn || learnMoreBtn || requestBtn) ? `<div class="actions">${reminderBtn}${requestBtn}${learnMoreBtn}</div>` : '';
-    const sources = {
-      breast: 'CancerCare Manitoba (BreastCheck)', cervix: 'CancerCare Manitoba (CervixCheck)',
-      colon: 'CancerCare Manitoba (ColonCheck)', diabetes: 'Diabetes Canada guidelines',
-      lipid: 'Canadian Cardiovascular Society (2021)', aaa: 'Canadian Task Force on Preventive Health Care (2017)',
-      lung: 'Provincial lung cancer screening referral criteria',
-    };
-    return `<div class="rcard">
-      <div class="rtop"><h3>${r.title}</h3><span class="pill ${meta.pillClass}">${meta.label}</span></div>
-      <p class="desc">${r.message}</p>
-      ${r.extraNote ? `<p class="desc" style="color:var(--clay);">${r.extraNote}</p>` : ''}
-      ${progressHtml}
-      ${actions}
-      <p class="source">Source: ${sources[r.key] || 'CancerCare Manitoba / Diabetes Canada guidelines'}</p>
+  grid.innerHTML = resultCategories.map(cat => {
+    const cards = cat.keys.map(k => currentRecs.find(r => r.key === k)).filter(Boolean);
+    if(!cards.length) return '';
+    return `<div class="result-category">
+      <h3 class="category-heading">${cat.label}</h3>
+      <div class="results-grid">${cards.map(buildResultCardHtml).join('')}</div>
     </div>`;
   }).join('');
 
